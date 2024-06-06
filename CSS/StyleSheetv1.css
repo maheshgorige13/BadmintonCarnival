@@ -1,0 +1,1078 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font: 400 15px/100% 'Nunito Sans', sans-serif;
+    color: #222;
+}
+
+
+.Btn {
+    display: block;
+    margin: 10px;
+    padding: 20px 30px;
+    text-decoration: none;
+    text-transform: uppercase;
+    position: relative;
+    cursor: pointer;
+}
+
+    .Btn.Book {
+        font: 800 18px/100% 'Nunito Sans';
+        color: #fff;
+        background: #ED017F;
+        box-shadow: 0px 4px 80px rgba(0, 0, 0, 0.4);
+        border-radius: 8px;
+    }
+
+        .Btn.Book.Lite {
+            background: #fff;
+            color: #ED017F;
+        }
+
+    .Btn.LearnMore {
+        font: 800 18px/100% 'Nunito Sans';
+        color: #fff;
+        background: rgba(0,0,0,0.2);
+        border: 1px solid rgba(255,255,255,0.5);
+        border-radius: 5px;
+    }
+
+    .Btn.Icn {
+        padding-left: 60px;
+        text-transform: none;
+    }
+
+        .Btn.Icn:before {
+            content: '';
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            left: 15px;
+            top: calc(50% - 15px);
+            background-color: transparent;
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: 30px;
+        }
+
+        .Btn.Icn.PDF:before {
+            background-image: url(../Images/Icn-FilePDF.svg);
+        }
+
+strong {
+    font-weight: 800;
+}
+
+div.SiteWidth {
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 20px;
+    margin: 0 auto;
+}
+
+div.HeroDv {
+    background: transparent url(../Images/HeroBG-Img.svg) no-repeat center center;
+    background-size: cover;
+    height: 50vh;
+    position: relative;
+    z-index: 3;
+}
+
+    div.HeroDv:after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 180px;
+        left: 0;
+        bottom: 0;
+        background: transparent url(../Images/Section2BG-Img.svg) no-repeat center center;
+        background-size: cover;
+        z-index: 1;
+        display: none;
+    }
+
+    div.HeroDv div.SiteWidth {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        height: 100%;
+        position: relative;
+        z-index: 2;
+    }
+
+    div.HeroDv div.BadmintonHeroDtlsHldr {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: self-start;
+        width: 100%;
+    }
+
+        div.HeroDv div.BadmintonHeroDtlsHldr div.Lft {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            width: 50%;
+        }
+
+            div.HeroDv div.BadmintonHeroDtlsHldr div.Lft div.PromoDtls {
+                width: 100%;
+            }
+
+                div.HeroDv div.BadmintonHeroDtlsHldr div.Lft div.PromoDtls div.LogoHldr {
+                    display: flex;
+                    flex-wrap: wrap;
+                    width: min-content;
+                    justify-content: center;
+                    padding: 20px 0;
+                }
+
+                    div.HeroDv div.BadmintonHeroDtlsHldr div.Lft div.PromoDtls div.LogoHldr img.Logo {
+                        display: block;
+                    }
+
+                    div.HeroDv div.BadmintonHeroDtlsHldr div.Lft div.PromoDtls div.LogoHldr img.JOYiZM {
+                        width: 100px;
+                        margin: 0 0 10px 0;
+                    }
+
+                    div.HeroDv div.BadmintonHeroDtlsHldr div.Lft div.PromoDtls div.LogoHldr img.BadmintonCarnival {
+                        width: 240px;
+                    }
+
+                div.HeroDv div.BadmintonHeroDtlsHldr div.Lft div.PromoDtls div.PricingDtls {
+                    padding: 30px 0 0 0;
+                }
+
+                    div.HeroDv div.BadmintonHeroDtlsHldr div.Lft div.PromoDtls div.PricingDtls span.ErlyBrd {
+                        display: inline-block;
+                        position: relative;
+                        background: #FFCD02;
+                        color: #004ACF;
+                        padding: 12px 7px 0 14px;
+                        height: 40px;
+                        font: 800 16px/100% 'Nunito Sans';
+                        text-transform: uppercase;
+                    }
+
+                        div.HeroDv div.BadmintonHeroDtlsHldr div.Lft div.PromoDtls div.PricingDtls span.ErlyBrd:after {
+                            content: '';
+                            position: absolute;
+                            right: -40px;
+                            top: 0;
+                            width: 40px;
+                            height: 40px;
+                            background: transparent url(../Images/EarlyBird-Arrow.svg) no-repeat center center;
+                            background-size: 40px;
+                        }
+
+            div.HeroDv div.BadmintonHeroDtlsHldr div.Lft div.PricingDtls div.PriceDv {
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                padding: 10px 40px 10px 0;
+                width: fit-content;
+                border-bottom: 1px solid #FFCD02;
+            }
+
+                div.HeroDv div.BadmintonHeroDtlsHldr div.Lft div.PricingDtls div.PriceDv div.AmountHldr span.Amount {
+                    display: block;
+                    font: 200 50px/100% 'Nunito Sans';
+                    color: #FFCD02;
+                }
+
+                div.HeroDv div.BadmintonHeroDtlsHldr div.Lft div.PricingDtls div.PriceDv div.AmountDtlsHldr {
+                    padding: 0 0 0 10px;
+                }
+
+                    div.HeroDv div.BadmintonHeroDtlsHldr div.Lft div.PricingDtls div.PriceDv div.AmountDtlsHldr span.Txt {
+                        display: block;
+                        color: #fff;
+                        padding: 5px 0;
+                        position: relative;
+                    }
+
+                    div.HeroDv div.BadmintonHeroDtlsHldr div.Lft div.PricingDtls div.PriceDv div.AmountDtlsHldr span.CtgryInfo {
+                        font: 400 18px/100% 'Nunito Sans';
+                    }
+
+                    div.HeroDv div.BadmintonHeroDtlsHldr div.Lft div.PricingDtls div.PriceDv div.AmountDtlsHldr span.DteInfo {
+                        font: 800 18px/100% 'Nunito Sans';
+                    }
+
+            div.HeroDv div.BadmintonHeroDtlsHldr div.Lft div.PricingDtls div.DateInfo {
+                padding: 15px 0 10px 0;
+            }
+
+                div.HeroDv div.BadmintonHeroDtlsHldr div.Lft div.PricingDtls div.DateInfo span.Txt {
+                    display: block;
+                    font: 800 40px/100% 'Nunito Sans';
+                    color: #fff;
+                }
+
+                div.HeroDv div.BadmintonHeroDtlsHldr div.Lft div.PricingDtls div.DateInfo span.SbTxt {
+                    display: block;
+                    font: 600 24px/100% 'Nunito Sans';
+                    padding: 15px 0 10px 0;
+                    color: #fff;
+                }
+
+            div.HeroDv div.BadmintonHeroDtlsHldr div.Lft div.BttnHldr {
+                display: flex;
+                flex-wrap: wrap;
+            }
+
+        div.HeroDv div.BadmintonHeroDtlsHldr div.Rgt {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            width: 50%;
+        }
+
+            div.HeroDv div.BadmintonHeroDtlsHldr div.Rgt div.ImgHldr {
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                margin: 0 0 0 auto;
+            }
+
+div.BadmintonHeroDtlsHldr div.Rgt div.ImgHldr img.HeroImg {
+    display: block;
+    width: 100%;
+}
+
+
+div.DetailsScntnDv {
+    position: relative;
+    background: #2358B7;
+    padding: 80px 0 200px 0;
+    z-index: 4;
+}
+
+    div.DetailsScntnDv div.HighlghtdDtlsHldr {
+        margin: -160px 0 0 0;
+        position: relative;
+        z-index: 2;
+    }
+
+        div.DetailsScntnDv div.HighlghtdDtlsHldr div.AppLnksHldr {
+            padding: 0 50px;
+            display: none;
+        }
+
+            div.DetailsScntnDv div.HighlghtdDtlsHldr div.AppLnksHldr div.CntntHldr {
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                justify-content: center;
+                height: 80px;
+                background: #ED017F;
+                padding: 0 30px;
+                border-radius: 20px 20px 0 0;
+            }
+
+                div.DetailsScntnDv div.HighlghtdDtlsHldr div.AppLnksHldr div.CntntHldr span.CmmntTxt {
+                    position: relative;
+                    padding: 0 10px 0 0;
+                    font: 800 16px/100% 'Nunito Sans';
+                    color: #fff;
+                    text-decoration: none;
+                    display: none;
+                }
+
+                div.DetailsScntnDv div.HighlghtdDtlsHldr div.AppLnksHldr div.CntntHldr a.AppLnk {
+                    position: relative;
+                    margin: 0 0 0 0;
+                    padding: 0 40px 0 50px;
+                    font: 800 16px/100% 'Nunito Sans';
+                    color: #fff;
+                    text-transform: uppercase;
+                    text-decoration: none;
+                }
+
+                    div.DetailsScntnDv div.HighlghtdDtlsHldr div.AppLnksHldr div.CntntHldr a.AppLnk:before {
+                        content: '';
+                        background: #fff;
+                        width: 24px;
+                        height: 24px;
+                        position: absolute;
+                        left: 10px;
+                        top: calc(50% - 12px);
+                        background-color: transparent !important;
+                        background-position: center center !important;
+                        background-repeat: no-repeat !important;
+                    }
+
+                div.DetailsScntnDv div.HighlghtdDtlsHldr div.AppLnksHldr div.CntntHldr a.Teams:before {
+                    background-image: url(../Images/Icn-Team.svg);
+                }
+
+                div.DetailsScntnDv div.HighlghtdDtlsHldr div.AppLnksHldr div.CntntHldr a.Standings:before {
+                    background-image: url(../Images/Icn-Standing.svg);
+                }
+
+                div.DetailsScntnDv div.HighlghtdDtlsHldr div.AppLnksHldr div.CntntHldr a.Schedule:before {
+                    background-image: url(../Images/Icn-Schedule.svg);
+                }
+
+        div.DetailsScntnDv div.HighlghtdDtlsHldr div.HighlghtCtgryHldr {
+            display: flex;
+            flex-wrap: wrap;
+            background: #5C1247;
+            padding: 10px;
+            border-radius: 20px;
+        }
+
+            div.DetailsScntnDv div.HighlghtdDtlsHldr div.HighlghtCtgryHldr div.Sctn {
+                position: relative;
+                width: 25%;
+                padding: 20px;
+            }
+
+            div.DetailsScntnDv div.HighlghtdDtlsHldr div.HighlghtCtgryHldr div.Brdr:after {
+                content: '';
+                position: absolute;
+                width: 1px;
+                height: calc(100% - 40px);
+                right: 0;
+                top: 20px;
+                background: #FFCD02;
+            }
+
+            div.DetailsScntnDv div.HighlghtdDtlsHldr div.HighlghtCtgryHldr div.Sctn span.Txt {
+                display: block;
+                font: 700 20px/140% 'Nunito Sans';
+                color: #fff;
+                text-align: center;
+            }
+
+            div.DetailsScntnDv div.HighlghtdDtlsHldr div.HighlghtCtgryHldr div.Sctn span.Clr {
+                color: #FFCD02;
+            }
+
+            div.DetailsScntnDv div.HighlghtdDtlsHldr div.HighlghtCtgryHldr div.Ctgry span.Clr {
+                display: block;
+                text-transform: uppercase;
+                font-weight: 800;
+            }
+
+    div.DetailsScntnDv div.DtlsCntnt {
+        padding: 100px 0;
+    }
+
+        div.DetailsScntnDv div.DtlsCntnt h1.PgTtl {
+            display: block;
+            text-align: center;
+            font: 800 32px/150% 'Nunito Sans';
+            color: #FFCD02;
+            padding: 0;
+            margin: 0;
+        }
+
+            div.DetailsScntnDv div.DtlsCntnt h1.PgTtl span.MnTxt {
+                display: block;
+                font: 800 44px/150% 'Nunito Sans';
+            }
+
+            div.DetailsScntnDv div.DtlsCntnt h1.PgTtl span.Txt {
+                display: block;
+                font: 700 30px/150% 'Nunito Sans';
+                padding: 5px 0 0 0;
+            }
+
+        div.DetailsScntnDv div.DtlsCntnt p.Txt {
+            display: block;
+            text-align: center;
+            font: 500 20px/180% 'Nunito Sans';
+            color: #fff;
+        }
+
+        div.DetailsScntnDv div.DtlsCntnt div.BtnHldr {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px 0 0 0;
+        }
+
+div.FormatPrizeSctn {
+    background: #029E8B;
+    position: relative;
+    padding: 0 0 160px 0;
+    z-index: 5;
+}
+
+    div.FormatPrizeSctn div.PrizesHldr {
+        display: flex;
+        flex-wrap: wrap;
+        background: #FD820B;
+        position: relative;
+        border-radius: 20px;
+        overflow: hidden;
+        top: -160px;
+    }
+
+        div.FormatPrizeSctn div.PrizesHldr div.Lft {
+            display: flex;
+            flex-wrap: wrap;
+            width: 50%;
+            height: 100%;
+            padding: 50px 0 0 0;
+            align-items: self-end;
+        }
+
+            div.FormatPrizeSctn div.PrizesHldr div.Lft img.Img {
+                width: 100%;
+            }
+
+        div.FormatPrizeSctn div.PrizesHldr div.Rgt {
+            display: flex;
+            flex-wrap: wrap;
+            width: 50%;
+            align-items: center;
+            padding: 0 40px 0 0;
+        }
+
+            div.FormatPrizeSctn div.PrizesHldr div.Rgt h2.TxtTtl {
+                display: block;
+                font: 800 32px/150% 'Nunito Sans';
+                text-transform: uppercase;
+                color: #fff;
+                padding: 0 0 0 0;
+                margin: 0;
+            }
+
+            div.FormatPrizeSctn div.PrizesHldr div.Rgt ul.Lst {
+                list-style: none;
+                padding: 0;
+                margin: 0 0 0 0;
+            }
+
+                div.FormatPrizeSctn div.PrizesHldr div.Rgt ul.Lst li {
+                    display: block;
+                    position: relative;
+                    font: 600 20px/150% 'Nunito Sans';
+                    color: #fff;
+                    padding: 10px 0 10px 24px;
+                    text-align: justify;
+                }
+
+                    div.FormatPrizeSctn div.PrizesHldr div.Rgt ul.Lst li:before {
+                        content: '';
+                        position: absolute;
+                        width: 10px;
+                        height: 10px;
+                        border-radius: 5px;
+                        background: #fff;
+                        left: 0;
+                        top: 19px;
+                    }
+
+
+    div.FormatPrizeSctn div.FormatHldr {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+        div.FormatPrizeSctn div.FormatHldr div.Lft {
+            display: flex;
+            flex-wrap: wrap;
+            width: 50%;
+            height: 100%;
+            padding: 0;
+        }
+
+            div.FormatPrizeSctn div.FormatHldr div.Lft img.Img {
+                width: calc(100% + 100px);
+                position: relative;
+                left: -100px;
+            }
+
+        div.FormatPrizeSctn div.FormatHldr div.Rgt {
+            display: flex;
+            flex-wrap: wrap;
+            width: 50%;
+            align-items: center;
+            padding: 0 40px 0 0;
+        }
+
+            div.FormatPrizeSctn div.FormatHldr div.Rgt h2.TxtTtl {
+                display: block;
+                font: 800 32px/150% 'Nunito Sans';
+                text-transform: uppercase;
+                color: #fff;
+                padding: 0 0 0 0;
+                margin: 0;
+            }
+
+            div.FormatPrizeSctn div.FormatHldr div.Rgt p.Txt {
+                display: block;
+                font: 500 18px/170% 'Nunito Sans';
+                color: #fff;
+                padding: 10px 0 10px 0;
+                text-align: justify;
+            }
+
+            div.FormatPrizeSctn div.FormatHldr div.Rgt div.BtnHldr {
+                display: flex;
+                flex-wrap: wrap;
+            }
+
+div.JOYiZMEvents {
+    background: #ED017F;
+    padding: 100px 0 40px 0;
+    position: relative;
+    z-index: 5;
+}
+
+    div.JOYiZMEvents div.CrprtSpnsrshp {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        position: relative;
+        z-index: 3;
+        background: #2B237C;
+        padding: 50px 30px;
+        border-radius: 20px;
+        margin: -200px 0 100px 0;
+    }
+
+        div.JOYiZMEvents div.CrprtSpnsrshp div.ImgHldr {
+            width: 40%;
+            padding: 10px;
+        }
+
+            div.JOYiZMEvents div.CrprtSpnsrshp div.ImgHldr img.Img {
+                display: block;
+                width: 80%;
+                margin: 0 auto;
+            }
+
+        div.JOYiZMEvents div.CrprtSpnsrshp div.TxtHldr {
+            width: 60%;
+            padding: 0 20px;
+        }
+
+            div.JOYiZMEvents div.CrprtSpnsrshp div.TxtHldr h3.TxtTtl {
+                display: block;
+                font: 800 32px/150% 'Nunito Sans';
+                text-transform: uppercase;
+                color: #fff;
+                padding: 0 0 0 0;
+                margin: 0;
+            }
+
+            div.JOYiZMEvents div.CrprtSpnsrshp div.TxtHldr p.Txt {
+                display: block;
+                font: 500 18px/170% 'Nunito Sans';
+                color: #fff;
+                padding: 10px 0 10px 0;
+                margin: 0;
+                text-align: justify;
+            }
+
+    div.JOYiZMEvents div.EventsHldrs h2.TxtTtl {
+        display: block;
+        text-align: center;
+        font: 800 32px/150% 'Nunito Sans';
+        text-transform: uppercase;
+        color: #fff;
+        padding: 0 0 0 0;
+        margin: 0;
+    }
+
+    div.JOYiZMEvents div.EventsHldrs div.EvntsLogosDv {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        padding: 30px 0 0 0;
+    }
+
+        div.JOYiZMEvents div.EventsHldrs div.EvntsLogosDv div.LogoHldr {
+            width: 33.33%;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+        }
+
+            div.JOYiZMEvents div.EventsHldrs div.EvntsLogosDv div.LogoHldr img.Logo {
+                display: block;
+                width: 100%;
+                max-width: 200px;
+                margin: 0 auto;
+            }
+
+    div.JOYiZMEvents div.GalleryDvHldr {
+        margin: 60px 0;
+        padding: 50px;
+        background: #FFFFFF;
+        box-shadow: 0px 20px 80px rgba(0, 0, 0, 0.25);
+        border-radius: 30px;
+    }
+
+
+    div.JOYiZMEvents div.FtrHldr {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        width: 100%;
+    }
+
+        div.JOYiZMEvents div.FtrHldr div.LogoHldr {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+            div.JOYiZMEvents div.FtrHldr div.LogoHldr a.Lnk {
+                display: block;
+                margin: 0 20px 0 0;
+                text-decoration: none;
+            }
+
+            div.JOYiZMEvents div.FtrHldr div.LogoHldr img.Logo {
+                display: block;
+            }
+
+            div.JOYiZMEvents div.FtrHldr div.LogoHldr img.JOYiZM {
+                width: 130px;
+            }
+
+            div.JOYiZMEvents div.FtrHldr div.LogoHldr img.Rezy {
+                width: 150px;
+            }
+
+        div.JOYiZMEvents div.FtrHldr div.LnksHldr {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            margin: 0 0 0 auto;
+        }
+
+            div.JOYiZMEvents div.FtrHldr div.LnksHldr ul.LnkLst {
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                margin: 0;
+                padding: 0;
+                list-style: none;
+            }
+
+                div.JOYiZMEvents div.FtrHldr div.LnksHldr ul.LnkLst li {
+                    padding: 0 10px;
+                }
+
+                    div.JOYiZMEvents div.FtrHldr div.LnksHldr ul.LnkLst li span.Txt {
+                        display: block;
+                        padding: 5px;
+                        font: 700 15px/100% 'Nunito Sans';
+                        color: #fff;
+                    }
+
+                    div.JOYiZMEvents div.FtrHldr div.LnksHldr ul.LnkLst li a.Lnk {
+                        display: block;
+                        padding: 5px;
+                        font: 600 15px/100% 'Nunito Sans';
+                        color: #fff;
+                        text-decoration: none;
+                    }
+
+                        div.JOYiZMEvents div.FtrHldr div.LnksHldr ul.LnkLst li a.Lnk:hover {
+                            text-decoration: underline;
+                        }
+
+
+
+
+
+@media only screen and (max-width: 1920px) {
+    div.HeroDv {
+        height: 100vh;
+    }
+
+        div.HeroDv:after {
+            display: block;
+        }
+}
+
+@media only screen and (max-width: 1400px) {
+
+
+    div.HeroDv div.BadmintonHeroDtlsHldr div.Lft div.PromoDtls div.LogoHldr {
+        padding: 15px 0;
+    }
+
+        div.HeroDv div.BadmintonHeroDtlsHldr div.Lft div.PromoDtls div.LogoHldr img.JOYiZM {
+            width: 80px;
+        }
+
+        div.HeroDv div.BadmintonHeroDtlsHldr div.Lft div.PromoDtls div.LogoHldr img.BadmintonCarnival {
+            width: 200px;
+        }
+
+    div.HeroDv div.BadmintonHeroDtlsHldr div.Lft div.PricingDtls div.DateInfo span.Txt {
+        font-size: 35px;
+    }
+
+    div.HeroDv div.BadmintonHeroDtlsHldr div.Lft div.PromoDtls div.PricingDtls {
+        padding-top: 5px;
+    }
+
+        div.HeroDv div.BadmintonHeroDtlsHldr div.Lft div.PromoDtls div.PricingDtls span.ErlyBrd {
+            height: 34px;
+            font-size: 13px;
+        }
+
+            div.HeroDv div.BadmintonHeroDtlsHldr div.Lft div.PromoDtls div.PricingDtls span.ErlyBrd:after {
+                width: 34px;
+                height: 34px;
+                background-size: 34px;
+                right: -34px;
+            }
+
+
+    div.HeroDv div.BadmintonHeroDtlsHldr div.Lft div.PricingDtls div.PriceDv {
+        padding: 6px 40px 6px 0;
+    }
+
+        div.HeroDv div.BadmintonHeroDtlsHldr div.Lft div.PricingDtls div.PriceDv div.AmountHldr span.Amount {
+            font-size: 50px;
+        }
+
+    div.HeroDv div.BadmintonHeroDtlsHldr div.Lft div.PricingDtls div.DateInfo {
+        padding: 7px 0;
+    }
+}
+
+@media only screen and (max-width: 1150px) {
+    div.HeroDv div.BadmintonHeroDtlsHldr div.Lft div.PricingDtls div.PriceDv div.AmountHldr span.Amount {
+        font-size: 40px;
+    }
+}
+
+
+@media only screen and (max-width: 767px) {
+
+    .Btn.Book {
+        font: 700 15px/100% 'Nunito Sans';
+    }
+
+    .Btn.LearnMore {
+        font: 700 13px/100% 'Nunito Sans';
+    }
+
+    div.HeroDv {
+        height: calc(90vh - 100px);
+        padding: 20px 0 0 0;
+    }
+
+        div.HeroDv div.SiteWidth {
+            align-items: flex-start;
+        }
+
+        div.HeroDv div.BadmintonHeroDtlsHldr div.Lft {
+            z-index: 2;
+            width: 75%;
+        }
+
+            div.HeroDv div.BadmintonHeroDtlsHldr div.Lft div.PromoDtls div.LogoHldr {
+                padding: 0;
+            }
+
+                div.HeroDv div.BadmintonHeroDtlsHldr div.Lft div.PromoDtls div.LogoHldr img.JOYiZM {
+                    width: 70px;
+                }
+
+                div.HeroDv div.BadmintonHeroDtlsHldr div.Lft div.PromoDtls div.LogoHldr img.BadmintonCarnival {
+                    width: 150px;
+                }
+
+            div.HeroDv div.BadmintonHeroDtlsHldr div.Lft div.PromoDtls div.PricingDtls span.ErlyBrd {
+                height: 30px;
+                font-size: 11px;
+                padding-top: 10px;
+            }
+
+                div.HeroDv div.BadmintonHeroDtlsHldr div.Lft div.PromoDtls div.PricingDtls span.ErlyBrd:after {
+                    right: -26px;
+                    width: 30px;
+                    height: 30px;
+                    background-size: 30px;
+                }
+
+            div.HeroDv div.BadmintonHeroDtlsHldr div.Lft div.PromoDtls div.PricingDtls {
+                padding: 20px 0 10px 0;
+            }
+
+            div.HeroDv div.BadmintonHeroDtlsHldr div.Lft div.PricingDtls div.PriceDv {
+                padding: 10px 0;
+                flex-wrap: nowrap;
+            }
+
+                div.HeroDv div.BadmintonHeroDtlsHldr div.Lft div.PricingDtls div.PriceDv div.AmountDtlsHldr {
+                    padding-left: 7px;
+                }
+
+                div.HeroDv div.BadmintonHeroDtlsHldr div.Lft div.PricingDtls div.PriceDv div.AmountHldr span.Amount {
+                    font-size: 30px;
+                    font-weight: 500;
+                }
+
+                div.HeroDv div.BadmintonHeroDtlsHldr div.Lft div.PricingDtls div.PriceDv div.AmountDtlsHldr span.Txt {
+                    padding: 0;
+                }
+
+                div.HeroDv div.BadmintonHeroDtlsHldr div.Lft div.PricingDtls div.PriceDv div.AmountDtlsHldr span.CtgryInfo {
+                    font-size: 13px;
+                }
+
+                div.HeroDv div.BadmintonHeroDtlsHldr div.Lft div.PricingDtls div.PriceDv div.AmountDtlsHldr span.DteInfo {
+                    font-size: 13px;
+                    padding-top: 5px;
+                }
+
+            div.HeroDv div.BadmintonHeroDtlsHldr div.Lft div.PricingDtls div.DateInfo {
+                padding: 5px 0;
+            }
+
+                div.HeroDv div.BadmintonHeroDtlsHldr div.Lft div.PricingDtls div.DateInfo span.Txt {
+                    font-size: 20px;
+                    letter-spacing: 0;
+                    padding: 10px 0 0 0;
+                }
+
+                div.HeroDv div.BadmintonHeroDtlsHldr div.Lft div.PricingDtls div.DateInfo span.SbTxt {
+                    font-size: 15px;
+                    letter-spacing: 0;
+                    padding: 5px 0 0 0;
+                }
+
+            div.HeroDv div.BadmintonHeroDtlsHldr div.Lft div.BttnHldr .Btn {
+                padding: 15px 10px;
+                border-radius: 3px;
+                margin: 5px 0;
+                width: 100%;
+            }
+
+        div.HeroDv div.BadmintonHeroDtlsHldr div.Rgt {
+            position: absolute;
+            z-index: 1;
+            right: 0;
+        }
+
+
+
+
+
+
+
+
+
+
+    div.DetailsScntnDv div.HighlghtdDtlsHldr div.HighlghtCtgryHldr {
+        padding: 20px;
+    }
+
+        div.DetailsScntnDv div.HighlghtdDtlsHldr div.HighlghtCtgryHldr div.Sctn {
+            width: 100%;
+            padding: 10px;
+        }
+
+        div.DetailsScntnDv div.HighlghtdDtlsHldr div.HighlghtCtgryHldr div.Brdr:after {
+            width: 100%;
+            height: 1px;
+            top: 100%;
+            opacity: 0.5;
+        }
+
+        div.DetailsScntnDv div.HighlghtdDtlsHldr div.HighlghtCtgryHldr div.Sctn span.Txt {
+            font-size: 15px;
+        }
+
+    div.DetailsScntnDv div.DtlsCntnt {
+        padding: 80px 0 20px 0;
+    }
+
+        div.DetailsScntnDv div.DtlsCntnt h1.PgTtl {
+            font: 800 25px/140% 'Nunito Sans';
+        }
+
+            div.DetailsScntnDv div.DtlsCntnt h1.PgTtl span.MnTxt {
+                font: 800 30px/140% 'Nunito Sans';
+            }
+
+            div.DetailsScntnDv div.DtlsCntnt h1.PgTtl span.Txt {
+                font: 800 20px/140% 'Nunito Sans';
+            }
+
+        div.DetailsScntnDv div.DtlsCntnt p.Txt {
+            font: 500 15px/150% 'Nunito Sans';
+        }
+
+        div.DetailsScntnDv div.DtlsCntnt div.BtnHldr .Btn {
+            width: 100%;
+        }
+
+
+    div.FormatPrizeSctn {
+        padding: 0 0 80px 0;
+    }
+
+        div.FormatPrizeSctn div.PrizesHldr {
+            flex-direction: column-reverse;
+        }
+
+            div.FormatPrizeSctn div.PrizesHldr div.Lft, div.FormatPrizeSctn div.PrizesHldr div.Rgt {
+                width: 100%;
+            }
+
+            div.FormatPrizeSctn div.PrizesHldr div.Lft {
+                padding: 0;
+            }
+
+                div.FormatPrizeSctn div.PrizesHldr div.Lft img.Img {
+                    position: relative;
+                    margin-top: -60px;
+                }
+
+            div.FormatPrizeSctn div.PrizesHldr div.Rgt {
+                padding: 30px;
+            }
+
+                div.FormatPrizeSctn div.PrizesHldr div.Rgt h2.TxtTtl {
+                    font: 800 20px/150% 'Nunito Sans';
+                    text-align: center;
+                }
+
+
+                div.FormatPrizeSctn div.PrizesHldr div.Rgt ul.Lst li {
+                    font: 600 15px/150% 'Nunito Sans';
+                }
+
+        div.FormatPrizeSctn div.FormatHldr {
+            margin-top: -100px;
+        }
+
+
+
+            div.FormatPrizeSctn div.FormatHldr div.Lft, div.FormatPrizeSctn div.FormatHldr div.Rgt {
+                width: 100%;
+                padding: 0;
+            }
+
+                div.FormatPrizeSctn div.FormatHldr div.Lft img.Img {
+                    width: 100%;
+                    left: 0;
+                }
+
+
+                div.FormatPrizeSctn div.FormatHldr div.Rgt h2.TxtTtl {
+                    text-align: center;
+                    font: 800 20px/150% 'Nunito Sans';
+                }
+
+
+
+                div.FormatPrizeSctn div.FormatHldr div.Rgt p.Txt {
+                    font: 600 13px/140% 'Nunito Sans';
+                }
+
+                div.FormatPrizeSctn div.FormatHldr div.Rgt div.BtnHldr .Btn {
+                    width: 100%;
+                }
+
+    div.JOYiZMEvents {
+        padding: 80px 0 30px 0;
+    }
+
+        div.JOYiZMEvents div.CrprtSpnsrshp {
+            padding: 30px 20px;
+            margin: -130px 0 50px 0;
+        }
+
+            div.JOYiZMEvents div.CrprtSpnsrshp div.ImgHldr {
+                width: 100%;
+            }
+
+                div.JOYiZMEvents div.CrprtSpnsrshp div.ImgHldr img.Img {
+                    width: 60%;
+                }
+
+            div.JOYiZMEvents div.CrprtSpnsrshp div.TxtHldr {
+                width: 100%;
+            }
+
+                div.JOYiZMEvents div.CrprtSpnsrshp div.TxtHldr h3.TxtTtl {
+                    font: 800 20px/150% 'Nunito Sans';
+                    text-align: center;
+                }
+
+                div.JOYiZMEvents div.CrprtSpnsrshp div.TxtHldr p.Txt {
+                    font: 600 13px/170% 'Nunito Sans';
+                    text-align: center;
+                }
+
+
+        div.JOYiZMEvents div.EventsHldrs h2.TxtTtl {
+            font: 800 20px/150% 'Nunito Sans';
+        }
+
+        div.JOYiZMEvents div.EventsHldrs div.EvntsLogosDv {
+            padding: 10px 0 0 0;
+        }
+
+            div.JOYiZMEvents div.EventsHldrs div.EvntsLogosDv div.LogoHldr {
+                width: 50%;
+                padding: 20px;
+            }
+
+        div.JOYiZMEvents div.GalleryDvHldr {
+            padding: 10px;
+            border-radius: 10px;
+            margin: 30px 0 60px 0;
+        }
+
+
+        div.JOYiZMEvents div.FtrHldr div.LogoHldr {
+            width: 100%;
+            justify-content: center;
+        }
+
+            div.JOYiZMEvents div.FtrHldr div.LogoHldr a.Lnk {
+                text-align: center;
+                margin: 10px;
+            }
+
+            div.JOYiZMEvents div.FtrHldr div.LogoHldr img.JOYiZM {
+                width: 100px;
+            }
+
+            div.JOYiZMEvents div.FtrHldr div.LogoHldr img.Rezy {
+                width: 120px;
+            }
+
+        div.JOYiZMEvents div.FtrHldr div.LnksHldr {
+            margin: 0;
+            width: 100%;
+        }
+
+            div.JOYiZMEvents div.FtrHldr div.LnksHldr ul.LnkLst li {
+                width: 100%;
+                padding: 15px 0;
+            }
+
+                div.JOYiZMEvents div.FtrHldr div.LnksHldr ul.LnkLst li span.Txt, div.JOYiZMEvents div.FtrHldr div.LnksHldr ul.LnkLst li a.Lnk {
+                    text-align: center;
+                    padding: 10px;
+                    font-size: 13px;
+                }
+}

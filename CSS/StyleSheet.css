@@ -1,0 +1,2805 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font: 400 18px/100% "Nunito Sans", sans-serif;
+  color: #455A64;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span {
+  margin: 0;
+  padding: 0;
+}
+
+.AppSiteWidth {
+  width: 100%;
+  max-width: 1220px;
+  padding: 0 10px;
+  margin: 0 auto;
+}
+.AppSiteWidth.FlxWrp {
+  display: flex;
+  flex-wrap: wrap;
+}
+.AppSiteWidth.FlxNoWrp {
+  display: flex;
+  flex-wrap: nowrap;
+}
+.AppSiteWidth.AlgnItmCntr {
+  align-items: center;
+}
+
+.BCAppHdr {
+  position: fixed;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 100%;
+  height: 110px;
+  left: 0;
+  top: 0;
+  z-index: 20;
+  transition: 0.3s;
+}
+.BCAppHdr .AppSiteWidth {
+  position: relative;
+}
+.BCAppHdr .LogoHldr .Lnk {
+  display: flex;
+  flex-wrap: wrap;
+  text-decoration: none;
+}
+.BCAppHdr .LogoHldr .Lnk .Logo {
+  display: block;
+  width: 220px;
+}
+@media only screen and (max-width: 767px) {
+  .BCAppHdr .LogoHldr .Lnk .Logo {
+    width: 180px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .BCAppHdr .LogoHldr {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+  }
+}
+.BCAppHdr .BCAppMenu {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 0 0 auto;
+}
+.BCAppHdr .BCAppMenu .MnuLst {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.BCAppHdr .BCAppMenu .MnuLst li {
+  padding: 0 5px;
+}
+.BCAppHdr .BCAppMenu .MnuLst li .Lnk {
+  display: block;
+  padding: 10px 15px;
+  margin: 0;
+  font: 700 18px/100% "Nunito Sans";
+  letter-spacing: 1px;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+@media only screen and (max-width: 767px) {
+  .BCAppHdr .BCAppMenu {
+    display: none;
+  }
+}
+.BCAppHdr.sticky, .BCAppHdr.Innr {
+  background: rgba(194, 24, 91, 0.95);
+  height: 90px;
+  transition: 0.3s;
+}
+@media only screen and (max-width: 767px) {
+  .BCAppHdr.sticky, .BCAppHdr.Innr {
+    height: 50px;
+    transition: 0.3s;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .BCAppHdr {
+    height: 70px;
+    transition: 0.3s;
+  }
+}
+
+.HeroImageHldr {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 90vh;
+  max-height: 1320px;
+  z-index: 1;
+}
+.HeroImageHldr .HeroImage {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.HeroImageHldr .HeroImage.Web {
+  display: block;
+}
+.HeroImageHldr .HeroImage.Mbl {
+  display: none;
+}
+@media only screen and (max-width: 767px) {
+  .HeroImageHldr .HeroImage.Web {
+    display: none;
+  }
+  .HeroImageHldr .HeroImage.Mbl {
+    display: block;
+  }
+}
+.HeroImageHldr .CptnHldr {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+}
+.HeroImageHldr .CptnHldr .TxtHldr {
+  width: 50%;
+}
+.HeroImageHldr .CptnHldr .TxtHldr .CptnTtl {
+  color: #fff;
+  font: 200 90px/90% "Montserrat";
+}
+@media only screen and (max-width: 1200px) {
+  .HeroImageHldr .CptnHldr .TxtHldr .CptnTtl {
+    font: 200 60px/120% "Montserrat";
+  }
+}
+@media only screen and (max-width: 767px) {
+  .HeroImageHldr .CptnHldr .TxtHldr .CptnTtl {
+    font: 400 40px/120% "Montserrat";
+  }
+}
+.HeroImageHldr .CptnHldr .TxtHldr .SubTxt {
+  padding: 25px 0;
+  color: #fff;
+  font: 700 20px/100% "Montserrat";
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+@media only screen and (max-width: 767px) {
+  .HeroImageHldr .CptnHldr .TxtHldr .SubTxt {
+    font: 700 15px/100% "Montserrat";
+  }
+}
+.HeroImageHldr .CptnHldr .TxtHldr .Lnk {
+  display: inline-block;
+  padding: 15px 25px;
+  border: 1px solid #fff;
+  text-decoration: none;
+  background: rgba(0, 0, 0, 0.75);
+  color: #fff;
+  font: 600 18px/100% "Nunito Sans";
+  cursor: pointer;
+  transition: 0.3s;
+}
+.HeroImageHldr .CptnHldr .TxtHldr .Lnk:hover {
+  background: rgba(194, 24, 91, 0.95);
+  border-color: rgb(194, 24, 91);
+  transition: 0.3s;
+}
+@media only screen and (max-width: 767px) {
+  .HeroImageHldr .CptnHldr .TxtHldr .Lnk {
+    font: 600 15px/100% "Nunito Sans";
+  }
+}
+@media only screen and (max-width: 767px) {
+  .HeroImageHldr .CptnHldr .TxtHldr {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .HeroImageHldr {
+    height: 65vh;
+  }
+}
+
+.UpCmngDtlsDv {
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 2;
+  padding: 10px 20px;
+  margin: -80px 0 0 0;
+  min-height: 160px;
+  background: linear-gradient(92.04deg, #4B33B5 0%, #130066 51.72%);
+}
+.UpCmngDtlsDv .TtlHldr {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  position: relative;
+}
+.UpCmngDtlsDv .TtlHldr .TtlTxt {
+  display: block;
+  text-align: center;
+  color: #FFB700;
+  font: 700 24px/120% "Montserrat";
+  text-transform: uppercase;
+  padding: 0 40px 0 20px;
+}
+@media only screen and (max-width: 1040px) {
+  .UpCmngDtlsDv .TtlHldr .TtlTxt {
+    padding: 0 20px 0 0;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .UpCmngDtlsDv .TtlHldr .TtlTxt {
+    width: 100%;
+    font: 700 18px/120% "Montserrat";
+    text-align: center;
+    padding: 0 0 10px 0;
+  }
+  .UpCmngDtlsDv .TtlHldr .TtlTxt br {
+    display: none;
+  }
+}
+.UpCmngDtlsDv .TtlHldr:after {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: calc(100% - 60px);
+  background: rgba(255, 255, 255, 0.5);
+  right: 0;
+  top: 30px;
+}
+@media only screen and (max-width: 767px) {
+  .UpCmngDtlsDv .TtlHldr:after {
+    width: 100%;
+    height: 1px;
+    bottom: 15px;
+    top: auto;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .UpCmngDtlsDv .TtlHldr {
+    padding: 10px 20px 20px 20px;
+    width: 100%;
+  }
+}
+.UpCmngDtlsDv .DtlsHldr {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  position: relative;
+  padding: 0 20px;
+  flex-grow: 1;
+}
+.UpCmngDtlsDv .DtlsHldr .LogoHldr {
+  padding: 0 10px;
+  flex-grow: 1;
+}
+.UpCmngDtlsDv .DtlsHldr .LogoHldr .Logo {
+  display: block;
+  max-width: 200px;
+  margin: 0 auto;
+}
+@media only screen and (max-width: 767px) {
+  .UpCmngDtlsDv .DtlsHldr .LogoHldr .Logo {
+    width: 90%;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .UpCmngDtlsDv .DtlsHldr .LogoHldr {
+    width: 35%;
+  }
+}
+.UpCmngDtlsDv .DtlsHldr .DtlHldr {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  padding: 0;
+  flex-grow: 1;
+}
+.UpCmngDtlsDv .DtlsHldr .DtlHldr .DtTxt {
+  display: block;
+  width: 100%;
+  font: 800 34px/100% "Nunito Sans";
+  text-align: center;
+  color: #fff;
+}
+@media only screen and (max-width: 767px) {
+  .UpCmngDtlsDv .DtlsHldr .DtlHldr .DtTxt {
+    font: 800 18px/100% "Nunito Sans";
+  }
+}
+.UpCmngDtlsDv .DtlsHldr .DtlHldr .MmbrsTxt {
+  display: block;
+  font: 600 18px/100% "Nunito Sans";
+  background: #fff;
+  color: #4B33B5;
+  padding: 10px 30px;
+  margin: 8px 0 0 0;
+  border-radius: 30px;
+}
+@media only screen and (max-width: 767px) {
+  .UpCmngDtlsDv .DtlsHldr .DtlHldr .MmbrsTxt {
+    font: 600 13px/100% "Nunito Sans";
+    padding: 5px 10px;
+    margin: 4px 0 0 0;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .UpCmngDtlsDv .DtlsHldr .DtlHldr {
+    width: 65%;
+  }
+}
+.UpCmngDtlsDv .DtlsHldr .BtnHldr {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 0 10px;
+  flex-grow: 1;
+}
+.UpCmngDtlsDv .DtlsHldr .BtnHldr .Lnk {
+  display: block;
+  background: #FFB700;
+  color: #222;
+  font: 800 20px/100% "Nunito Sans";
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 24px 40px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.UpCmngDtlsDv .DtlsHldr .BtnHldr .Lnk:hover {
+  background: #FFC700;
+  transition: 0.3s;
+}
+@media only screen and (max-width: 1200px) {
+  .UpCmngDtlsDv .DtlsHldr .BtnHldr .Lnk {
+    padding: 20px 30px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .UpCmngDtlsDv .DtlsHldr .BtnHldr .Lnk {
+    font-size: 15px;
+    padding: 15px 30px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .UpCmngDtlsDv .DtlsHldr .BtnHldr {
+    width: 100%;
+    padding: 15px 0 10px 0;
+    margin: 15px 0 0 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+  }
+}
+@media only screen and (max-width: 1040px) {
+  .UpCmngDtlsDv .DtlsHldr {
+    padding: 0 0 0 20px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .UpCmngDtlsDv .DtlsHldr {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .UpCmngDtlsDv {
+    margin: 0 -10px;
+    width: calc(100% + 20px);
+  }
+}
+
+.TournamentBnnrsHldr {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 40px 0 0 0;
+}
+.TournamentBnnrsHldr .BnnrHldr {
+  width: 50%;
+}
+.TournamentBnnrsHldr .BnnrHldr .BnnrDv {
+  position: relative;
+}
+.TournamentBnnrsHldr .BnnrHldr .BnnrDv .TxtHldr {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  padding: 30px 50px;
+  left: 0;
+  top: 0;
+  z-index: 2;
+}
+.TournamentBnnrsHldr .BnnrHldr .BnnrDv .TxtHldr .Ttl {
+  width: 100%;
+  color: #fff;
+  font: 700 20px/120% "Montserrat";
+  text-transform: uppercase;
+  text-align: center;
+  text-shadow: 0px 0px 40px rgba(0, 0, 0, 0.9);
+}
+@media only screen and (max-width: 767px) {
+  .TournamentBnnrsHldr .BnnrHldr .BnnrDv .TxtHldr .Ttl {
+    font-size: 17px;
+  }
+}
+.TournamentBnnrsHldr .BnnrHldr .BnnrDv .TxtHldr .BadmintonCarnivalLogo {
+  width: 220px;
+}
+@media only screen and (max-width: 767px) {
+  .TournamentBnnrsHldr .BnnrHldr .BnnrDv .TxtHldr .BadmintonCarnivalLogo {
+    width: 150px;
+  }
+}
+.TournamentBnnrsHldr .BnnrHldr .BnnrDv .TxtHldr .SundayBadmintonBashLogo {
+  width: 140px;
+}
+@media only screen and (max-width: 767px) {
+  .TournamentBnnrsHldr .BnnrHldr .BnnrDv .TxtHldr .SundayBadmintonBashLogo {
+    width: 150px;
+  }
+}
+.TournamentBnnrsHldr .BnnrHldr .BnnrDv .TxtHldr .Lnk {
+  background: rgba(0, 0, 0, 0.7);
+  color: rgb(255, 255, 255);
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  font: 600 18px/100% "Nunito Sans";
+  text-decoration: none;
+  padding: 15px 30px;
+  margin: 10px 0 0 0;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.TournamentBnnrsHldr .BnnrHldr .BnnrDv .TxtHldr .Lnk:hover {
+  background: rgba(194, 24, 91, 0.95);
+  border-color: rgb(194, 24, 91);
+  transition: 0.3s;
+}
+@media only screen and (max-width: 767px) {
+  .TournamentBnnrsHldr .BnnrHldr .BnnrDv .TxtHldr .Lnk {
+    font-size: 13px;
+    padding: 10px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .TournamentBnnrsHldr .BnnrHldr .BnnrDv .TxtHldr {
+    padding: 10px;
+  }
+}
+.TournamentBnnrsHldr .BnnrHldr .BnnrDv img.BnnrImg {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  z-index: 1;
+}
+@media only screen and (max-width: 767px) {
+  .TournamentBnnrsHldr .BnnrHldr .BnnrDv img.BnnrImg {
+    height: 160px;
+  }
+}
+.TournamentBnnrsHldr .BnnrHldr .BnnrDv.One {
+  padding-right: 10px;
+}
+.TournamentBnnrsHldr .BnnrHldr .BnnrDv.One .TxtHldr {
+  align-items: flex-start;
+}
+.TournamentBnnrsHldr .BnnrHldr .BnnrDv.One .TxtHldr .Ttl {
+  text-align: left;
+}
+@media only screen and (max-width: 767px) {
+  .TournamentBnnrsHldr .BnnrHldr .BnnrDv.One {
+    width: 100%;
+    padding: 0;
+  }
+}
+.TournamentBnnrsHldr .BnnrHldr .BnnrDv.Two {
+  padding-bottom: 10px;
+  padding-left: 10px;
+}
+@media only screen and (max-width: 767px) {
+  .TournamentBnnrsHldr .BnnrHldr .BnnrDv.Two {
+    width: 50%;
+    padding: 10px 5px 0 0;
+  }
+}
+.TournamentBnnrsHldr .BnnrHldr .BnnrDv.Three {
+  padding-top: 10px;
+  padding-left: 10px;
+}
+@media only screen and (max-width: 767px) {
+  .TournamentBnnrsHldr .BnnrHldr .BnnrDv.Three {
+    width: 50%;
+    padding: 10px 0 0 5px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .TournamentBnnrsHldr .BnnrHldr {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .TournamentBnnrsHldr {
+    padding: 40px 0 0 0;
+  }
+}
+
+.TournamentDetails {
+  position: relative;
+  padding: 100px 0 0 0;
+  border-bottom: 1px solid #E7F1F8;
+}
+.TournamentDetails .DtlsDv {
+  position: relative;
+  margin: 0 0 -160px 0;
+  z-index: 2;
+}
+.TournamentDetails .DtlsDv .Ttl {
+  position: relative;
+  text-align: center;
+  margin: 0 0 20px 0;
+  font: 300 40px/100% "Nunito Sans";
+  color: #263238;
+  z-index: 1;
+}
+.TournamentDetails .DtlsDv .Ttl strong {
+  font: 800 40px/100% "Nunito Sans";
+  color: #C2185B;
+}
+@media only screen and (max-width: 1120px) {
+  .TournamentDetails .DtlsDv .Ttl {
+    font-size: 32px;
+    line-height: 140%;
+    margin: 0 0 10px 0;
+  }
+  .TournamentDetails .DtlsDv .Ttl strong {
+    font-size: 40px;
+  }
+}
+.TournamentDetails .DtlsDv .TtlTxt {
+  position: relative;
+  text-align: center;
+  margin: 0 0 20px 0;
+  z-index: 1;
+}
+.TournamentDetails .DtlsDv .TtlTxt .SmlTxt {
+  position: relative;
+  display: inline-block;
+  font: 800 24px/100% "Nunito Sans";
+  padding: 10px 20px;
+  text-align: center;
+  color: #283593;
+  background: #fff;
+  z-index: 2;
+}
+@media only screen and (max-width: 767px) {
+  .TournamentDetails .DtlsDv .TtlTxt .SmlTxt {
+    font-size: 20px;
+  }
+}
+.TournamentDetails .DtlsDv .TtlTxt:after {
+  content: "";
+  width: 100%;
+  height: 1px;
+  background: #ECEFF1;
+  position: absolute;
+  left: 0;
+  bottom: 22px;
+  z-index: 1;
+}
+@media only screen and (max-width: 767px) {
+  .TournamentDetails .DtlsDv .TtlTxt:after {
+    bottom: 18px;
+  }
+}
+.TournamentDetails .DtlsDv .Txt {
+  text-align: center;
+  padding: 10px 20px;
+  font: 400 20px/160% "Nunito Sans";
+}
+.TournamentDetails .DtlsDv .Txt strong {
+  font-weight: 700;
+  color: #263238;
+}
+@media only screen and (max-width: 767px) {
+  .TournamentDetails .DtlsDv .Txt {
+    padding: 5px 10px;
+    font-size: 17px;
+  }
+}
+.TournamentDetails .DtlsDv .TournmntDvs {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 40px 0 0 0;
+  position: relative;
+  z-index: 1;
+}
+.TournamentDetails .DtlsDv .TournmntDvs .DtlDv {
+  width: calc(33.33% - 20px);
+  margin: 0 10px -40px 10px;
+  filter: drop-shadow(0px 15px 50px rgba(18, 86, 120, 0.15));
+  transition: 0.3s;
+}
+.TournamentDetails .DtlsDv .TournmntDvs .DtlDv .LogoDv {
+  text-align: center;
+  padding: 30px;
+  background: #eee;
+}
+.TournamentDetails .DtlsDv .TournmntDvs .DtlDv .LogoDv .Logo {
+  display: block;
+  width: 90%;
+  max-width: 230px;
+  margin: 0 auto;
+}
+@media only screen and (max-width: 767px) {
+  .TournamentDetails .DtlsDv .TournmntDvs .DtlDv .LogoDv .Logo {
+    max-width: 160px;
+  }
+}
+.TournamentDetails .DtlsDv .TournmntDvs .DtlDv .LogoDv .DtHldr {
+  width: calc(100% + 60px);
+  margin: 30px -30px -30px -30px;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.3);
+}
+.TournamentDetails .DtlsDv .TournmntDvs .DtlDv .LogoDv .DtHldr .DtTxt {
+  display: block;
+  text-align: center;
+  color: #fff;
+  font: 700 20px/100% "Nunito Sans";
+  text-transform: uppercase;
+}
+@media only screen and (max-width: 767px) {
+  .TournamentDetails .DtlsDv .TournmntDvs .DtlDv .LogoDv .DtHldr .DtTxt {
+    font: 700 18px/100% "Nunito Sans";
+  }
+}
+.TournamentDetails .DtlsDv .TournmntDvs .DtlDv .LogoDv.Spring {
+  background: #76BA32;
+}
+.TournamentDetails .DtlsDv .TournmntDvs .DtlDv .LogoDv.Summer {
+  background: #FFA800;
+}
+.TournamentDetails .DtlsDv .TournmntDvs .DtlDv .LogoDv.Winter {
+  background: #3C79F5;
+}
+.TournamentDetails .DtlsDv .TournmntDvs .DtlDv .LnkDvDv {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background: #fff;
+  padding: 10px;
+}
+.TournamentDetails .DtlsDv .TournmntDvs .DtlDv .LnkDvDv .Hldr {
+  width: 50%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.TournamentDetails .DtlsDv .TournmntDvs .DtlDv .LnkDvDv .Hldr .Lnk {
+  display: block;
+  width: calc(100% - 10px);
+  margin: 0 5px;
+  padding: 20px 20px;
+  text-decoration: none;
+  color: #455A64;
+  font: 600 18px/100% "Nunito Sans";
+  position: relative;
+  cursor: pointer;
+}
+.TournamentDetails .DtlsDv .TournmntDvs .DtlDv .LnkDvDv .Hldr .Lnk.Book {
+  text-transform: uppercase;
+  text-align: center;
+  font: 700 18px/100% "Nunito Sans";
+  background: #FFB700;
+  color: #222;
+}
+.TournamentDetails .DtlsDv .TournmntDvs .DtlDv .LnkDvDv .Hldr .Lnk.Book:hover {
+  background: #FFC700;
+  color: #222;
+}
+@media only screen and (max-width: 767px) {
+  .TournamentDetails .DtlsDv .TournmntDvs .DtlDv .LnkDvDv .Hldr .Lnk.Book {
+    font-size: 13px;
+  }
+}
+.TournamentDetails .DtlsDv .TournmntDvs .DtlDv .LnkDvDv .Hldr .Lnk.Details {
+  padding-right: 30px;
+}
+.TournamentDetails .DtlsDv .TournmntDvs .DtlDv .LnkDvDv .Hldr .Lnk.Details:after {
+  content: "";
+  width: 20px;
+  height: 20px;
+  background: transparent url(../Images/Icn-Arrow.svg) no-repeat center center;
+  background-size: 20px;
+  position: absolute;
+  right: 10px;
+  top: calc(50% - 10px);
+}
+.TournamentDetails .DtlsDv .TournmntDvs .DtlDv .LnkDvDv .Hldr .Lnk.Past {
+  padding-left: 40px;
+}
+.TournamentDetails .DtlsDv .TournmntDvs .DtlDv .LnkDvDv .Hldr .Lnk.Past:after {
+  content: "";
+  width: 20px;
+  height: 20px;
+  background: transparent url(../Images/Icn-PastEvent.svg) no-repeat center center;
+  background-size: 20px;
+  position: absolute;
+  left: 10px;
+  top: calc(50% - 10px);
+}
+.TournamentDetails .DtlsDv .TournmntDvs .DtlDv .LnkDvDv .Hldr .Lnk:hover {
+  background: #ECEFF1;
+}
+@media only screen and (max-width: 767px) {
+  .TournamentDetails .DtlsDv .TournmntDvs .DtlDv .LnkDvDv .Hldr .Lnk {
+    font-size: 13px;
+  }
+}
+.TournamentDetails .DtlsDv .TournmntDvs .DtlDv .LnkDvDv .Hldr.Fll {
+  width: 100%;
+}
+.TournamentDetails .DtlsDv .TournmntDvs .DtlDv .LnkDvDv .Hldr:after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 1px;
+  height: 100%;
+  background: #E7F1F8;
+  right: 0;
+  top: 0;
+}
+.TournamentDetails .DtlsDv .TournmntDvs .DtlDv .LnkDvDv .Hldr:last-of-type:after {
+  display: none;
+}
+.TournamentDetails .DtlsDv .TournmntDvs .DtlDv.Actv {
+  z-index: 2;
+  margin-bottom: 0;
+}
+.TournamentDetails .DtlsDv .TournmntDvs .DtlDv.Actv .LogoDv {
+  padding: 50px 30px;
+}
+.TournamentDetails .DtlsDv .TournmntDvs .DtlDv.Actv .LogoDv .Logo {
+  max-width: 280px;
+}
+.TournamentDetails .DtlsDv .TournmntDvs .DtlDv.Actv .LogoDv .DtHldr {
+  margin-top: 50px;
+  margin-bottom: -50px;
+}
+.TournamentDetails .DtlsDv .TournmntDvs .DtlDv:hover {
+  filter: drop-shadow(0px 15px 80px rgba(18, 86, 120, 0.25));
+}
+@media only screen and (max-width: 767px) {
+  .TournamentDetails .DtlsDv .TournmntDvs .DtlDv {
+    width: 100%;
+    margin: 10px 0;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .TournamentDetails .DtlsDv .TournmntDvs {
+    padding: 0 0 0 0;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .TournamentDetails .DtlsDv {
+    margin: 0;
+  }
+}
+.TournamentDetails .BGDv {
+  width: 100%;
+  max-width: 1720px;
+  margin: 0 auto;
+  position: relative;
+  background: #E7F1F8;
+  padding: 160px 0 50px 0;
+  z-index: 1;
+}
+.TournamentDetails .BGDv .AppSiteWidth {
+  display: flex;
+  flex-wrap: wrap;
+}
+.TournamentDetails .BGDv .TournamentMnrDtls {
+  width: 50%;
+  padding: 0 20px;
+}
+.TournamentDetails .BGDv .TournamentMnrDtls .Ttl {
+  font: 600 18px/100% "Montserrat";
+  text-transform: uppercase;
+}
+@media only screen and (max-width: 767px) {
+  .TournamentDetails .BGDv .TournamentMnrDtls .Ttl {
+    font: 700 13px/100% "Montserrat";
+  }
+}
+.TournamentDetails .BGDv .TournamentMnrDtls .Txt {
+  font: 400 18px/160% "Nunito Sans";
+  padding: 15px 0;
+}
+@media only screen and (max-width: 767px) {
+  .TournamentDetails .BGDv .TournamentMnrDtls .Txt {
+    font: 400 13px/160% "Nunito Sans";
+  }
+}
+.TournamentDetails .BGDv .TournamentMnrDtls .List li {
+  padding: 10px 0;
+  font: 400 18px/160% "Nunito Sans";
+}
+.TournamentDetails .BGDv .TournamentMnrDtls .List li strong {
+  font-weight: 700;
+}
+@media only screen and (max-width: 767px) {
+  .TournamentDetails .BGDv .TournamentMnrDtls .List li {
+    font: 400 13px/160% "Nunito Sans";
+  }
+}
+@media only screen and (max-width: 767px) {
+  .TournamentDetails .BGDv .TournamentMnrDtls {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 1200px) {
+  .TournamentDetails .BGDv {
+    width: 100%;
+    display: none;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .TournamentDetails {
+    padding: 80px 0 0 0;
+  }
+}
+
+.GalleryDv {
+  padding: 100px 0;
+}
+.GalleryDv .AppSiteWidth {
+  display: flex;
+  flex-wrap: wrap;
+}
+@media only screen and (max-width: 767px) {
+  .GalleryDv .AppSiteWidth {
+    flex-direction: column-reverse;
+  }
+}
+.GalleryDv .GllryHldr {
+  width: 66.66%;
+}
+.GalleryDv .GllryHldr.FllView {
+  width: 100%;
+}
+@media only screen and (max-width: 767px) {
+  .GalleryDv .GllryHldr {
+    width: 100%;
+  }
+}
+.GalleryDv .TtlHldr {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  width: 33.33%;
+  padding: 20px;
+}
+.GalleryDv .TtlHldr .Ttl {
+  display: block;
+  font: 700 44px/100% "Montserrat";
+  text-align: center;
+  text-transform: uppercase;
+  color: #C2185B;
+}
+@media only screen and (max-width: 767px) {
+  .GalleryDv .TtlHldr .Ttl {
+    font: 700 28px/100% "Montserrat";
+  }
+}
+.GalleryDv .TtlHldr .Txt {
+  text-align: center;
+  padding: 10px 20px;
+  font: 500 18px/160% "Nunito Sans";
+}
+@media only screen and (max-width: 767px) {
+  .GalleryDv .TtlHldr .Txt {
+    font-size: 15px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .GalleryDv .TtlHldr {
+    width: 100%;
+    padding: 20px 0;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .GalleryDv {
+    padding: 50px 0;
+  }
+}
+
+.CaliforniaDv .BGHldr {
+  background: transparent url(../Images/CalifoniaBGv2.jpg) no-repeat center center;
+  background-size: cover;
+  height: 600px;
+  width: 100%;
+  max-width: 1720px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+@media only screen and (max-width: 1120px) {
+  .CaliforniaDv .BGHldr {
+    height: 400px;
+  }
+}
+.CaliforniaDv .CntntHldr {
+  position: relative;
+  z-index: 2;
+  margin: -300px 0 0 0;
+  padding: 0 0 40px 0;
+}
+.CaliforniaDv .CntntHldr .AppSiteWidth {
+  display: flex;
+  flex-wrap: wrap;
+}
+.CaliforniaDv .CntntHldr .AppSiteWidth .TtlHldr {
+  width: 50%;
+  padding: 70px 0 0 0;
+}
+.CaliforniaDv .CntntHldr .AppSiteWidth .TtlHldr .Ttl {
+  display: block;
+  font: 700 70px/130% "Montserrat";
+  color: #fff;
+}
+@media only screen and (max-width: 767px) {
+  .CaliforniaDv .CntntHldr .AppSiteWidth .TtlHldr .Ttl {
+    font: 700 40px/130% "Montserrat";
+  }
+}
+@media only screen and (max-width: 767px) {
+  .CaliforniaDv .CntntHldr .AppSiteWidth .TtlHldr {
+    width: 100%;
+    padding: 20px;
+  }
+}
+.CaliforniaDv .CntntHldr .AppSiteWidth .TxtHldr {
+  width: 50%;
+  padding: 50px;
+  background: #fff;
+}
+.CaliforniaDv .CntntHldr .AppSiteWidth .TxtHldr .Txt {
+  display: block;
+  padding: 10px 0;
+  font: 400 18px/160% "Nunito Sans";
+}
+.CaliforniaDv .CntntHldr .AppSiteWidth .TxtHldr .Txt:first-of-type {
+  padding-top: 0;
+}
+.CaliforniaDv .CntntHldr .AppSiteWidth .TxtHldr .Txt strong {
+  font: 700 20px/160% "Nunito Sans";
+  color: #263238;
+}
+@media only screen and (max-width: 767px) {
+  .CaliforniaDv .CntntHldr .AppSiteWidth .TxtHldr .Txt strong {
+    font-size: 15px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .CaliforniaDv .CntntHldr .AppSiteWidth .TxtHldr .Txt {
+    font-size: 15px;
+  }
+}
+.CaliforniaDv .CntntHldr .AppSiteWidth .TxtHldr .Lnk {
+  display: block;
+  position: relative;
+  width: 100%;
+  font: 700 18px/100% "Nunito Sans";
+  color: #C2185B;
+  padding: 30px 20px;
+  margin: 20px 0 0 0;
+  border: 1px solid #C2185B;
+  text-decoration: none;
+  background: #fff;
+}
+.CaliforniaDv .CntntHldr .AppSiteWidth .TxtHldr .Lnk.Icn {
+  padding-left: 90px;
+}
+.CaliforniaDv .CntntHldr .AppSiteWidth .TxtHldr .Lnk.Icn:before {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  left: 30px;
+  top: calc(50% - 20px);
+  background-color: transparent !important;
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+  background-size: 100% !important;
+}
+.CaliforniaDv .CntntHldr .AppSiteWidth .TxtHldr .Lnk.Explr:before {
+  background-image: url(../Images/Icn-Compass.svg);
+}
+@media only screen and (max-width: 767px) {
+  .CaliforniaDv .CntntHldr .AppSiteWidth .TxtHldr .Lnk {
+    font-size: 15px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .CaliforniaDv .CntntHldr .AppSiteWidth .TxtHldr {
+    width: 100%;
+    padding: 20px;
+  }
+}
+.CaliforniaDv .TrvlPrmo {
+  background: #F0FAFF;
+  padding: 80px 0;
+}
+.CaliforniaDv .TrvlPrmo .AppSiteWidth {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.CaliforniaDv .TrvlPrmo .AppSiteWidth .TxtHldr {
+  width: 50%;
+  padding: 0 20px 0 0;
+}
+.CaliforniaDv .TrvlPrmo .AppSiteWidth .TxtHldr .InnrTtl {
+  font: 700 24px/100% "Montserrat";
+  color: #1565C0;
+  text-transform: uppercase;
+}
+@media only screen and (max-width: 767px) {
+  .CaliforniaDv .TrvlPrmo .AppSiteWidth .TxtHldr .InnrTtl {
+    font-size: 20px;
+  }
+}
+.CaliforniaDv .TrvlPrmo .AppSiteWidth .TxtHldr .Txt {
+  font: 400 26px/120% "Nunito Sans";
+  color: #263238;
+}
+.CaliforniaDv .TrvlPrmo .AppSiteWidth .TxtHldr .Txt strong {
+  font-weight: 800;
+  color: #C2185B;
+}
+.CaliforniaDv .TrvlPrmo .AppSiteWidth .TxtHldr .InnrTxt {
+  font: 400 18px/160% "Nunito Sans";
+  color: #455A64;
+  padding: 10px 0 0 0;
+}
+@media only screen and (max-width: 767px) {
+  .CaliforniaDv .TrvlPrmo .AppSiteWidth .TxtHldr .InnrTxt {
+    font-size: 15px;
+  }
+}
+@media only screen and (max-width: 1120px) {
+  .CaliforniaDv .TrvlPrmo .AppSiteWidth .TxtHldr {
+    width: 35%;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .CaliforniaDv .TrvlPrmo .AppSiteWidth .TxtHldr {
+    width: 100%;
+    padding: 0 0 20px 0;
+  }
+  .CaliforniaDv .TrvlPrmo .AppSiteWidth .TxtHldr .Txt {
+    font-size: 20px;
+    text-align: center;
+  }
+}
+.CaliforniaDv .TrvlPrmo .AppSiteWidth .BtnHldr {
+  display: flex;
+  flex-wrap: wrap;
+  width: 50%;
+  align-items: center;
+  justify-content: center;
+}
+.CaliforniaDv .TrvlPrmo .AppSiteWidth .BtnHldr .Txt {
+  padding: 0 15px;
+  font-weight: 600;
+}
+@media only screen and (max-width: 767px) {
+  .CaliforniaDv .TrvlPrmo .AppSiteWidth .BtnHldr .Txt {
+    font-size: 15px;
+  }
+}
+.CaliforniaDv .TrvlPrmo .AppSiteWidth .BtnHldr .Lnk {
+  font: 700 18px/100% "Nunito Sans";
+  color: #01579B;
+  padding: 30px 30px;
+  border: 1px solid #81D4FA;
+  text-decoration: none;
+  background: rgba(255, 255, 255, 0.5);
+  position: relative;
+  cursor: pointer;
+}
+.CaliforniaDv .TrvlPrmo .AppSiteWidth .BtnHldr .Lnk.Icn {
+  padding-left: 60px;
+}
+.CaliforniaDv .TrvlPrmo .AppSiteWidth .BtnHldr .Lnk.Icn:before {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  left: 20px;
+  top: calc(50% - 15px);
+  background-color: transparent !important;
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+  background-size: 100% !important;
+}
+.CaliforniaDv .TrvlPrmo .AppSiteWidth .BtnHldr .Lnk.Tckts:before {
+  background-image: url(../Images/Icn-Ticket.svg);
+}
+.CaliforniaDv .TrvlPrmo .AppSiteWidth .BtnHldr .Lnk.PlnVst:before {
+  background-image: url(../Images/Icn-Plan.svg);
+}
+@media only screen and (max-width: 767px) {
+  .CaliforniaDv .TrvlPrmo .AppSiteWidth .BtnHldr .Lnk {
+    font-size: 15px;
+  }
+}
+@media only screen and (max-width: 1120px) {
+  .CaliforniaDv .TrvlPrmo .AppSiteWidth .BtnHldr {
+    width: 65%;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .CaliforniaDv .TrvlPrmo .AppSiteWidth .BtnHldr {
+    width: 100%;
+    flex-direction: column;
+  }
+  .CaliforniaDv .TrvlPrmo .AppSiteWidth .BtnHldr .Lnk {
+    width: 100%;
+  }
+  .CaliforniaDv .TrvlPrmo .AppSiteWidth .BtnHldr .Txt {
+    padding: 10px;
+  }
+}
+
+.CorporateSctnDv {
+  padding: 100px 0;
+}
+.CorporateSctnDv .SctnDv {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row-reverse;
+  align-items: center;
+}
+.CorporateSctnDv .SctnDv .ImgHldr {
+  width: 50%;
+}
+.CorporateSctnDv .SctnDv .ImgHldr .Img {
+  display: block;
+  width: 100%;
+  min-height: 450px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media only screen and (max-width: 767px) {
+  .CorporateSctnDv .SctnDv .ImgHldr .Img {
+    min-height: auto;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .CorporateSctnDv .SctnDv .ImgHldr {
+    width: 100%;
+  }
+}
+.CorporateSctnDv .SctnDv .TxtHldr {
+  width: 50%;
+  padding: 40px;
+}
+.CorporateSctnDv .SctnDv .TxtHldr .Ttl {
+  display: block;
+  font: 700 30px/120% "Montserrat";
+  text-transform: uppercase;
+  color: #C2185B;
+}
+@media only screen and (max-width: 767px) {
+  .CorporateSctnDv .SctnDv .TxtHldr .Ttl {
+    font-size: 22px;
+  }
+}
+.CorporateSctnDv .SctnDv .TxtHldr .Txt {
+  display: block;
+  padding: 10px 0;
+  font: 400 18px/160% "Nunito Sans";
+}
+@media only screen and (max-width: 767px) {
+  .CorporateSctnDv .SctnDv .TxtHldr .Txt {
+    font-size: 15px;
+  }
+}
+.CorporateSctnDv .SctnDv .TxtHldr .Lnk {
+  display: inline-block;
+  font: 700 18px/100% "Nunito Sans";
+  color: #C2185B;
+  padding: 20px 20px;
+  margin: 10px 10px 0 0;
+  border: 1px solid #C2185B;
+  text-decoration: none;
+  background: #fff;
+  position: relative;
+}
+.CorporateSctnDv .SctnDv .TxtHldr .Lnk.Icn {
+  padding-right: 50px;
+}
+.CorporateSctnDv .SctnDv .TxtHldr .Lnk.Icn:after {
+  content: "";
+  position: absolute;
+  width: 26px;
+  height: 26px;
+  right: 15px;
+  top: calc(50% - 13px);
+  background-color: transparent !important;
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+  background-size: 100% !important;
+}
+.CorporateSctnDv .SctnDv .TxtHldr .Lnk.Arrw:after {
+  background-image: url(../Images/Icn-Arrow-Pink.svg);
+}
+.CorporateSctnDv .SctnDv .TxtHldr .Lnk.Clr {
+  background: #C2185B;
+  color: #fff;
+}
+@media only screen and (max-width: 767px) {
+  .CorporateSctnDv .SctnDv .TxtHldr .Lnk {
+    font-size: 15px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .CorporateSctnDv .SctnDv .TxtHldr {
+    width: 100%;
+    padding: 20px 0;
+  }
+}
+.CorporateSctnDv .SctnDv:first-of-type {
+  flex-direction: initial;
+  padding-bottom: 50px;
+  margin-bottom: 50px;
+  border-bottom: 1px solid #ECEFF1;
+}
+
+.AboutJOYiZM {
+  background: transparent url(../Images/JOYiZMBG.jpg) no-repeat center center;
+  background-size: cover;
+  padding: 100px 0;
+}
+.AboutJOYiZM .AppSiteWidth {
+  display: flex;
+  flex-wrap: wrap;
+}
+.AboutJOYiZM .TxtHldr {
+  display: flex;
+  flex-wrap: wrap;
+  width: 50%;
+  flex-direction: column;
+  align-content: baseline;
+  justify-content: center;
+  position: relative;
+  z-index: 2;
+}
+.AboutJOYiZM .TxtHldr .Ttl {
+  display: block;
+  font: 700 40px/120% "Montserrat";
+  text-transform: uppercase;
+  color: #fff;
+}
+@media only screen and (max-width: 767px) {
+  .AboutJOYiZM .TxtHldr .Ttl {
+    font: 700 28px/120% "Montserrat";
+  }
+}
+.AboutJOYiZM .TxtHldr img.JOYiZMLogo {
+  display: block;
+  width: 100%;
+  max-width: 220px;
+  margin: 20px 0 0 0;
+}
+@media only screen and (max-width: 1120px) {
+  .AboutJOYiZM .TxtHldr img.JOYiZMLogo {
+    max-width: 140px;
+  }
+}
+.AboutJOYiZM .TxtHldr .TxtDv {
+  background: #fff;
+  padding: 50px;
+  position: relative;
+}
+.AboutJOYiZM .TxtHldr .TxtDv .Txt {
+  display: block;
+  padding: 10px 0;
+  font: 400 18px/160% "Nunito Sans";
+}
+.AboutJOYiZM .TxtHldr .TxtDv .Txt strong {
+  font-weight: 700;
+  color: #ED017F;
+}
+@media only screen and (max-width: 767px) {
+  .AboutJOYiZM .TxtHldr .TxtDv .Txt {
+    font-size: 15px;
+  }
+}
+.AboutJOYiZM .TxtHldr .TxtDv .Lnk {
+  display: inline-block;
+  background: rgb(255, 255, 255);
+  color: #fff;
+  background: #ED017F;
+  font: 700 18px/100% "Nunito Sans";
+  text-decoration: none;
+  padding: 24px 30px;
+  margin: 10px 0 0 0;
+  transition: 0.3s;
+  position: relative;
+  cursor: pointer;
+}
+.AboutJOYiZM .TxtHldr .TxtDv .Lnk.Icn {
+  padding-right: 60px;
+}
+.AboutJOYiZM .TxtHldr .TxtDv .Lnk.Icn:after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  right: 30px;
+  top: calc(50% - 10px);
+  background-color: transparent !important;
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+  background-size: 100% !important;
+}
+.AboutJOYiZM .TxtHldr .TxtDv .Lnk.ExtrnlLnk:after {
+  background-image: url(../Images/Icn-ExternalLink.svg);
+}
+@media only screen and (max-width: 767px) {
+  .AboutJOYiZM .TxtHldr .TxtDv .Lnk {
+    font-size: 15px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .AboutJOYiZM .TxtHldr .TxtDv {
+    padding: 20px;
+    margin: 10px 0 0 0;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .AboutJOYiZM .TxtHldr {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .AboutJOYiZM {
+    background-size: cover;
+    background-position: center top;
+  }
+}
+
+.FtrHldr {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 100%;
+  border-top: 1px solid #F4F5FA;
+}
+.FtrHldr.MainPage {
+  border-top: none;
+}
+.FtrHldr .LnksHldr {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  align-items: center;
+  padding: 40px 0;
+}
+.FtrHldr .LnksHldr .LnkLst {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.FtrHldr .LnksHldr .LnkLst li {
+  padding: 0 10px;
+  margin: 0 0 0 auto;
+}
+.FtrHldr .LnksHldr .LnkLst li .Txt {
+  display: block;
+  padding: 5px;
+  font: 400 16px/100% "Nunito Sans";
+  color: #78909C;
+}
+@media only screen and (max-width: 767px) {
+  .FtrHldr .LnksHldr .LnkLst li .Txt {
+    font: 500 13px/100% "Nunito Sans";
+  }
+}
+.FtrHldr .LnksHldr .LnkLst li .Lnk {
+  display: block;
+  padding: 5px;
+  font: 600 16px/100% "Nunito Sans";
+  color: #37474F;
+  text-decoration: none;
+  transition: 0.3s;
+}
+.FtrHldr .LnksHldr .LnkLst li .Lnk:hover {
+  color: #C2185B;
+  transition: 0.3s;
+}
+@media only screen and (max-width: 767px) {
+  .FtrHldr .LnksHldr .LnkLst li .Lnk {
+    padding: 0;
+    font: 500 13px/100% "Nunito Sans";
+  }
+}
+.FtrHldr .LnksHldr .LnkLst li.TxtLst {
+  margin: 0;
+  padding: 0;
+}
+@media only screen and (max-width: 767px) {
+  .FtrHldr .LnksHldr .LnkLst li {
+    width: 100%;
+    margin: 0;
+    padding: 20px 0;
+    text-align: center;
+  }
+}
+.FtrHldr .LogoHldr {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 30px 0;
+  align-items: center;
+  justify-content: center;
+  border-top: 1px solid #ECEFF1;
+}
+.FtrHldr .LogoHldr .Lnk {
+  display: block;
+  margin: 0 20px 0 0;
+  text-decoration: none;
+}
+.FtrHldr .LogoHldr .Logo {
+  display: block;
+}
+.FtrHldr .LogoHldr .Logo.JOYiZM {
+  width: 100px;
+}
+.FtrHldr .LogoHldr .Logo.Rezy {
+  width: 150px;
+}
+
+.PopupHldr {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 21;
+  left: 0;
+  top: 0;
+  display: none;
+}
+.PopupHldr.Active {
+  display: block;
+}
+.PopupHldr .PopupBG {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background: rgba(0, 0, 0, 0.5);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+}
+.PopupHldr .TxtHldr {
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  margin: 0 auto;
+  top: 50px;
+  width: 100%;
+  max-width: 500px;
+  background: #fff;
+  padding: 40px;
+}
+.PopupHldr .TxtHldr .Ttl {
+  display: block;
+  width: 100%;
+  font: 700 30px/100% "Montserrat";
+  text-transform: uppercase;
+  color: #C2185B;
+}
+@media only screen and (max-width: 767px) {
+  .PopupHldr .TxtHldr .Ttl {
+    font: 700 20px/100% "Montserrat";
+  }
+}
+.PopupHldr .TxtHldr .Txt {
+  display: block;
+  width: 100%;
+  padding: 10px 0 20px 0;
+  font: 500 18px/160% "Nunito Sans";
+}
+@media only screen and (max-width: 767px) {
+  .PopupHldr .TxtHldr .Txt {
+    font: 500 13px/160% "Nunito Sans";
+  }
+}
+.PopupHldr .TxtHldr .Lnk {
+  display: inline-block;
+  background: rgb(255, 255, 255);
+  color: rgb(194, 24, 91);
+  border: 1px solid rgb(194, 24, 91);
+  font: 600 18px/100% "Nunito Sans";
+  text-decoration: none;
+  padding: 15px 30px;
+  transition: 0.3s;
+  margin: 0 20px 0 0;
+}
+.PopupHldr .TxtHldr .Lnk.Back {
+  color: #455A64;
+  border-color: #ECEFF1;
+  cursor: pointer;
+}
+.PopupHldr .TxtHldr .Lnk:hover {
+  color: #fff;
+  background: rgba(194, 24, 91, 0.95);
+  border-color: rgb(194, 24, 91);
+  transition: 0.3s;
+}
+@media only screen and (max-width: 767px) {
+  .PopupHldr .TxtHldr .Lnk {
+    font: 600 13px/100% "Nunito Sans";
+  }
+}
+@media only screen and (max-width: 767px) {
+  .PopupHldr .TxtHldr {
+    padding: 20px;
+    width: 90%;
+  }
+}
+
+.InnrPgHrSctn {
+  position: relative;
+  width: 100%;
+  height: 50vh;
+}
+.InnrPgHrSctn .InnrHeroImage {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media only screen and (max-width: 767px) {
+  .InnrPgHrSctn .InnrHeroImage {
+    position: relative;
+    min-height: 460px;
+  }
+}
+.InnrPgHrSctn .PgTtlHldr {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: end;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+}
+.InnrPgHrSctn .PgTtlHldr .TtlSctn {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: right;
+  width: 50%;
+}
+.InnrPgHrSctn .PgTtlHldr .TtlSctn .CntntHldr {
+  padding-left: 0;
+}
+@media only screen and (max-width: 1200px) {
+  .InnrPgHrSctn .PgTtlHldr .TtlSctn .CntntHldr {
+    padding-left: 10px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .InnrPgHrSctn .PgTtlHldr .TtlSctn .CntntHldr {
+    padding: 40px 20px;
+  }
+}
+.InnrPgHrSctn .PgTtlHldr .TtlSctn .PgTtl {
+  display: block;
+  font: 800 50px/120% "Montserrat";
+  color: #fff;
+  position: relative;
+  padding: 0 0 20px 0;
+  margin: 0 0 10px 0;
+}
+.InnrPgHrSctn .PgTtlHldr .TtlSctn .PgTtl .Sml {
+  display: block;
+  font-size: 30px;
+  line-height: 100%;
+  font-weight: 700;
+  width: 100%;
+  padding-bottom: 10px;
+}
+.InnrPgHrSctn .PgTtlHldr .TtlSctn .PgTtl .BCLogo {
+  display: block;
+  width: 100%;
+  max-width: 400px;
+}
+@media only screen and (max-width: 767px) {
+  .InnrPgHrSctn .PgTtlHldr .TtlSctn .PgTtl .BCLogo {
+    max-width: 280px;
+  }
+}
+.InnrPgHrSctn .PgTtlHldr .TtlSctn .PgTtl:after {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 2px;
+  border-radius: 2px;
+  background: #fff;
+  left: 0;
+  bottom: 0;
+}
+@media only screen and (max-width: 767px) {
+  .InnrPgHrSctn .PgTtlHldr .TtlSctn .PgTtl {
+    font-size: 30px;
+  }
+}
+.InnrPgHrSctn .PgTtlHldr .TtlSctn .Txt {
+  font: 700 24px/150% "Nunito Sans";
+  color: #fff;
+}
+@media only screen and (max-width: 767px) {
+  .InnrPgHrSctn .PgTtlHldr .TtlSctn .Txt {
+    font-size: 18px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .InnrPgHrSctn .PgTtlHldr .TtlSctn {
+    width: 100%;
+  }
+}
+.InnrPgHrSctn .PgTtlHldr .TxtSctn {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left;
+  width: 50%;
+}
+.InnrPgHrSctn .PgTtlHldr .TxtSctn .CntntHldr {
+  padding-right: 0;
+}
+@media only screen and (max-width: 1200px) {
+  .InnrPgHrSctn .PgTtlHldr .TxtSctn .CntntHldr {
+    padding-right: 20px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .InnrPgHrSctn .PgTtlHldr .TxtSctn .CntntHldr {
+    padding: 20px;
+  }
+}
+.InnrPgHrSctn .PgTtlHldr .TxtSctn .Txt {
+  font: 400 24px/140% "Nunito Sans";
+  color: #263238;
+}
+@media only screen and (max-width: 767px) {
+  .InnrPgHrSctn .PgTtlHldr .TxtSctn .Txt {
+    font-size: 18px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .InnrPgHrSctn .PgTtlHldr .TxtSctn {
+    width: 100%;
+  }
+}
+.InnrPgHrSctn .PgTtlHldr .CntntHldr {
+  width: 100%;
+  max-width: 600px;
+  padding: 50px;
+}
+.InnrPgHrSctn .PgTtlHldr.LogoHldr .LogoDv {
+  width: 100%;
+}
+.InnrPgHrSctn .PgTtlHldr.LogoHldr .LogoDv .Logo {
+  display: block;
+  margin: 0 auto;
+  width: 300px;
+}
+@media only screen and (max-width: 767px) {
+  .InnrPgHrSctn .PgTtlHldr.LogoHldr .LogoDv .Logo {
+    width: 180px;
+  }
+}
+.InnrPgHrSctn .PgTtlHldr.LogoHldr .BtnDv {
+  width: 100%;
+  padding: 30px 0;
+  text-align: center;
+}
+.InnrPgHrSctn .PgTtlHldr.LogoHldr .BtnDv .Lnk {
+  display: inline-block;
+  background: rgb(255, 255, 255);
+  color: #fff;
+  background: #ED017F;
+  font: 700 18px/100% "Nunito Sans";
+  text-decoration: none;
+  padding: 20px 40px;
+  text-transform: uppercase;
+  transition: 0.3s;
+  position: relative;
+  cursor: pointer;
+}
+@media only screen and (max-width: 767px) {
+  .InnrPgHrSctn .PgTtlHldr.LogoHldr .BtnDv .Lnk {
+    font: 700 14px/100% "Nunito Sans";
+  }
+}
+@media only screen and (max-width: 767px) {
+  .InnrPgHrSctn .PgTtlHldr.LogoHldr {
+    position: absolute;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .InnrPgHrSctn .PgTtlHldr {
+    position: relative;
+  }
+}
+.InnrPgHrSctn.HlfVw {
+  height: 50vh;
+}
+@media only screen and (max-width: 767px) {
+  .InnrPgHrSctn.HlfVw .InnrHeroImage {
+    min-height: 260px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .InnrPgHrSctn.HlfVw {
+    height: 40vh;
+  }
+}
+@media only screen and (max-width: 1920px) {
+  .InnrPgHrSctn {
+    height: 95vh;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .InnrPgHrSctn {
+    height: auto;
+  }
+}
+
+.ExpClfrInnr {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 120px 0 80px 0;
+}
+.ExpClfrInnr .CntntHldr {
+  width: 50%;
+  padding: 0 30px;
+}
+.ExpClfrInnr .CntntHldr .ImgHldr .Img {
+  display: block;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.ExpClfrInnr .CntntHldr .TxtHldr {
+  padding: 20px 0 0 0;
+}
+.ExpClfrInnr .CntntHldr .TxtHldr .Ttl {
+  display: block;
+  font: 700 24px/140% "Montserrat";
+  color: #1565C0;
+}
+@media only screen and (max-width: 767px) {
+  .ExpClfrInnr .CntntHldr .TxtHldr .Ttl {
+    font-size: 20px;
+  }
+}
+.ExpClfrInnr .CntntHldr .TxtHldr .Txt {
+  font: 400 18px/160% "Nunito Sans";
+  color: #455A64;
+  padding: 10px 0 0 0;
+}
+@media only screen and (max-width: 767px) {
+  .ExpClfrInnr .CntntHldr .TxtHldr .Txt {
+    font-size: 15px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .ExpClfrInnr .CntntHldr {
+    width: 100%;
+    padding: 40px 0;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .ExpClfrInnr {
+    padding: 0;
+  }
+}
+
+.ExpClfrGllr {
+  padding: 100px 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+.ExpClfrGllr .Ttl {
+  width: 100%;
+  padding: 0 0 20px 0;
+  text-align: center;
+  font: 400 28px/160% "Nunito Sans";
+  color: #263238;
+}
+@media only screen and (max-width: 767px) {
+  .ExpClfrGllr .Ttl {
+    font-size: 20px;
+  }
+}
+.ExpClfrGllr .GlrSctn {
+  display: flex;
+  flex-wrap: wrap;
+  width: 50%;
+  height: 100%;
+}
+@media only screen and (max-width: 767px) {
+  .ExpClfrGllr .GlrSctn {
+    width: 100%;
+  }
+}
+.ExpClfrGllr .GllrImgHldr {
+  position: relative;
+  overflow: hidden;
+}
+.ExpClfrGllr .GllrImgHldr .Img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  transform: scale(1);
+  transition: 9s;
+  position: relative;
+  z-index: 1;
+}
+.ExpClfrGllr .GllrImgHldr .Img.Main {
+  height: 100%;
+}
+.ExpClfrGllr .GllrImgHldr .ImgTtl {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  padding: 20px;
+  font: 700 18px/100% "Nunito Sans";
+  background: rgba(0, 0, 0, 0.85);
+  color: #fff;
+  z-index: 2;
+}
+@media only screen and (max-width: 767px) {
+  .ExpClfrGllr .GllrImgHldr .ImgTtl {
+    font-size: 15px;
+  }
+}
+.ExpClfrGllr .GllrImgHldr:hover .Img {
+  transform: scale(1.5);
+  transition: 9s;
+}
+@media only screen and (max-width: 767px) {
+  .ExpClfrGllr {
+    padding: 50px 0;
+  }
+}
+
+.CorpTmsInnrCntnt {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 80px 0;
+}
+.CorpTmsInnrCntnt .ImgHldr {
+  width: 50%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: right;
+}
+.CorpTmsInnrCntnt .ImgHldr .Img {
+  display: block;
+  width: 100%;
+  max-width: 960px;
+}
+@media only screen and (max-width: 767px) {
+  .CorpTmsInnrCntnt .ImgHldr {
+    width: 100%;
+  }
+}
+.CorpTmsInnrCntnt .TxtHldr {
+  width: 50%;
+}
+.CorpTmsInnrCntnt .TxtHldr .CntntHldr {
+  width: 100%;
+  max-width: 600px;
+  padding: 50px 0 50px 50px;
+}
+.CorpTmsInnrCntnt .TxtHldr .CntntHldr .Txt {
+  font: 400 18px/160% "Nunito Sans";
+  color: #455A64;
+  padding: 10px 0;
+}
+.CorpTmsInnrCntnt .TxtHldr .CntntHldr .Txt strong {
+  font-weight: 700;
+  color: #263238;
+}
+@media only screen and (max-width: 767px) {
+  .CorpTmsInnrCntnt .TxtHldr .CntntHldr .Txt {
+    font-size: 15px;
+  }
+}
+.CorpTmsInnrCntnt .TxtHldr .CntntHldr .Lnk {
+  display: inline-block;
+  font: 700 18px/100% "Nunito Sans";
+  color: #fff;
+  background: #C2185B;
+  padding: 20px 20px;
+  margin: 10px 10px 0 0;
+  text-decoration: none;
+  position: relative;
+}
+@media only screen and (max-width: 767px) {
+  .CorpTmsInnrCntnt .TxtHldr .CntntHldr .Lnk {
+    font-size: 15px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .CorpTmsInnrCntnt .TxtHldr .CntntHldr {
+    padding: 20px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .CorpTmsInnrCntnt .TxtHldr {
+    width: 100%;
+  }
+}
+.CorpTmsInnrCntnt.Sponsorship {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row-reverse;
+  padding-bottom: 0;
+}
+.CorpTmsInnrCntnt.Sponsorship .ImgHldr {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left;
+}
+.CorpTmsInnrCntnt.Sponsorship .TxtHldr {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: right;
+}
+.CorpTmsInnrCntnt.Sponsorship .TxtHldr .CntntHldr {
+  padding-right: 50px;
+  padding-left: 0;
+}
+@media only screen and (max-width: 767px) {
+  .CorpTmsInnrCntnt.Sponsorship .TxtHldr .CntntHldr {
+    padding: 20px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .CorpTmsInnrCntnt {
+    padding: 40px 0;
+  }
+}
+
+.SttcCntnt {
+  text-align: center;
+  padding: 80px 0 40px 0;
+  border-bottom: 1px solid #ECEFF1;
+}
+.SttcCntnt .Txt {
+  font: 400 18px/160% "Nunito Sans";
+  text-align: center;
+  padding: 20px 0;
+}
+.SttcCntnt .Txt.HghLgtd {
+  font-size: 24px;
+}
+@media only screen and (max-width: 767px) {
+  .SttcCntnt .Txt.HghLgtd {
+    font-size: 18px;
+  }
+}
+.SttcCntnt .Txt.Big {
+  font-size: 30px;
+}
+@media only screen and (max-width: 767px) {
+  .SttcCntnt .Txt.Big {
+    font-size: 20px;
+  }
+}
+.SttcCntnt .Txt.Bld {
+  font-weight: 700;
+  font-size: 30px;
+  color: #263238;
+}
+@media only screen and (max-width: 767px) {
+  .SttcCntnt .Txt.Bld {
+    font-size: 22px;
+    line-height: 120%;
+  }
+}
+.SttcCntnt .Txt strong {
+  font-weight: 700;
+  color: #263238;
+}
+@media only screen and (max-width: 767px) {
+  .SttcCntnt .Txt {
+    font-size: 15px;
+  }
+}
+.SttcCntnt .Lnk {
+  display: inline-block;
+  font: 700 18px/100% "Nunito Sans";
+  color: #fff;
+  background: #C2185B;
+  padding: 20px 20px;
+  margin: 10px 10px 0 0;
+  text-decoration: none;
+  position: relative;
+}
+@media only screen and (max-width: 767px) {
+  .SttcCntnt .Lnk {
+    font-size: 15px;
+  }
+}
+.SttcCntnt.NoBrdr {
+  border-bottom: none;
+}
+@media only screen and (max-width: 767px) {
+  .SttcCntnt {
+    padding: 10px 0;
+  }
+}
+
+.CorpSpnsrHgh {
+  background: #FFF3E0;
+  padding: 80px 0;
+}
+.CorpSpnsrHgh .AppSiteWidth {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.CorpSpnsrHgh .AppSiteWidth .TxtHldr {
+  width: 75%;
+}
+.CorpSpnsrHgh .AppSiteWidth .TxtHldr .Txt {
+  font: 400 24px/140% "Nunito Sans";
+  color: #C2185B;
+}
+@media only screen and (max-width: 767px) {
+  .CorpSpnsrHgh .AppSiteWidth .TxtHldr .Txt {
+    text-align: center;
+    font-size: 18px;
+    padding-bottom: 20px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .CorpSpnsrHgh .AppSiteWidth .TxtHldr {
+    width: 100%;
+  }
+}
+.CorpSpnsrHgh .AppSiteWidth .BtnHldr {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  width: 25%;
+}
+.CorpSpnsrHgh .AppSiteWidth .BtnHldr .Lnk {
+  display: inline-block;
+  font: 700 18px/100% "Nunito Sans";
+  color: #fff;
+  background: #C2185B;
+  padding: 20px 20px;
+  text-decoration: none;
+  position: relative;
+}
+@media only screen and (max-width: 767px) {
+  .CorpSpnsrHgh .AppSiteWidth .BtnHldr .Lnk {
+    font-size: 15px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .CorpSpnsrHgh .AppSiteWidth .BtnHldr {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .CorpSpnsrHgh {
+    padding: 40px 0;
+  }
+}
+
+.AbtBdmntnDtsSctn {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 50px 0;
+}
+.AbtBdmntnDtsSctn .DtlsHldr {
+  display: flex;
+  flex-wrap: wrap;
+  flex-flow: column;
+  padding: 0 20px;
+  width: 33.33%;
+}
+.AbtBdmntnDtsSctn .DtlsHldr .ImgHldr .Img {
+  display: block;
+  width: 100%;
+}
+.AbtBdmntnDtsSctn .DtlsHldr .TxtHldr {
+  padding: 10px 10px 10px 20px;
+  margin: 20px 0 0 0;
+  position: relative;
+  height: 100%;
+}
+.AbtBdmntnDtsSctn .DtlsHldr .TxtHldr .Txt {
+  display: block;
+  font: 400 18px/160% "Nunito Sans";
+  color: #455A64;
+}
+@media only screen and (max-width: 767px) {
+  .AbtBdmntnDtsSctn .DtlsHldr .TxtHldr .Txt {
+    font-size: 15px;
+  }
+}
+.AbtBdmntnDtsSctn .DtlsHldr .TxtHldr:before {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 100%;
+  background: #CFD8DC;
+  left: 0;
+  top: 0;
+}
+@media only screen and (max-width: 767px) {
+  .AbtBdmntnDtsSctn .DtlsHldr .TxtHldr {
+    margin: 0 0 30px 0;
+    padding: 30px 20px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .AbtBdmntnDtsSctn .DtlsHldr {
+    width: 100%;
+  }
+}
+
+.CrnvlDtls {
+  padding: 100px 0;
+  background: #FAF9F8;
+}
+.CrnvlDtls .AppSiteWidth {
+  display: flex;
+  flex-wrap: wrap;
+}
+.CrnvlDtls .AppSiteWidth .CrnvlDv {
+  display: flex;
+  flex-wrap: wrap;
+  width: calc(33.33% - 20px);
+  margin: 0 10px;
+  flex-flow: column;
+}
+.CrnvlDtls .AppSiteWidth .CrnvlDv .LogoHldr {
+  padding: 50px 30px;
+}
+.CrnvlDtls .AppSiteWidth .CrnvlDv .LogoHldr .Logo {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 250px;
+}
+@media only screen and (max-width: 767px) {
+  .CrnvlDtls .AppSiteWidth .CrnvlDv .LogoHldr {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 50%;
+  }
+}
+.CrnvlDtls .AppSiteWidth .CrnvlDv .TxtHldr {
+  background: rgba(0, 0, 0, 0.25);
+  padding: 30px;
+  height: 100%;
+}
+.CrnvlDtls .AppSiteWidth .CrnvlDv .TxtHldr .Txt {
+  display: block;
+  font: 500 18px/160% "Nunito Sans";
+  color: #fff;
+  text-align: center;
+}
+@media only screen and (max-width: 767px) {
+  .CrnvlDtls .AppSiteWidth .CrnvlDv .TxtHldr .Txt {
+    font-size: 15px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .CrnvlDtls .AppSiteWidth .CrnvlDv .TxtHldr {
+    width: 50%;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .CrnvlDtls .AppSiteWidth .CrnvlDv .TxtHldr {
+    height: auto;
+  }
+}
+.CrnvlDtls .AppSiteWidth .CrnvlDv.Spring {
+  background: #76BA32;
+}
+.CrnvlDtls .AppSiteWidth .CrnvlDv.Summer {
+  background: #FFA800;
+}
+.CrnvlDtls .AppSiteWidth .CrnvlDv.Winter {
+  background: #3C79F5;
+}
+@media only screen and (max-width: 767px) {
+  .CrnvlDtls .AppSiteWidth .CrnvlDv {
+    flex-wrap: wrap;
+    flex-flow: inherit;
+    width: 100%;
+    margin: 0 0 30px 0;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .CrnvlDtls {
+    padding: 30px 0;
+  }
+}
+
+.SttcPgHrSctn {
+  padding: 150px 0 20px 0;
+}
+.SttcPgHrSctn .Ttl {
+  display: block;
+  font: 800 50px/120% "Montserrat";
+  color: #C2185B;
+  position: relative;
+  padding: 0 0 20px 0;
+  margin: 0 0 10px 0;
+}
+.SttcPgHrSctn .Ttl:after {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 4px;
+  border-radius: 2px;
+  background: #C2185B;
+  left: 0;
+  bottom: 0;
+}
+@media only screen and (max-width: 767px) {
+  .SttcPgHrSctn .Ttl {
+    font-size: 30px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .SttcPgHrSctn {
+    padding: 70px 0 20px 0;
+  }
+}
+
+.SttcPgs {
+  padding: 20px 0 50px 0;
+}
+.SttcPgs .Hldr {
+  padding: 20px 0;
+}
+.SttcPgs .Txt {
+  display: block;
+  padding: 15px 0;
+  font: 400 18px/160% "Nunito Sans";
+  color: #455A64;
+}
+.SttcPgs .Txt.Bld {
+  font-weight: 700;
+  color: #263238;
+}
+.SttcPgs .Txt:first-of-type {
+  padding-top: 0;
+}
+@media only screen and (max-width: 767px) {
+  .SttcPgs .Txt {
+    font-size: 15px;
+    padding: 10px 0;
+  }
+}
+.SttcPgs .Lnk {
+  color: #C2185B;
+}
+.SttcPgs .Lnk:hover {
+  text-decoration: none;
+}
+.SttcPgs .Lst {
+  margin: 0 0 20px 0;
+}
+.SttcPgs .Lst li {
+  font: 400 18px/160% "Nunito Sans";
+  color: #455A64;
+}
+@media only screen and (max-width: 767px) {
+  .SttcPgs .Lst li {
+    font-size: 15px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .SttcPgs .Lst {
+    margin: 0 0 10px 0;
+  }
+}
+.SttcPgs .ClrTxt {
+  color: #1565C0;
+  font-weight: 700;
+}
+.SttcPgs.FAQ {
+  padding-top: 0;
+}
+.SttcPgs.FAQ .Txt {
+  padding: 5px 0;
+}
+.SttcPgs.PrvcPlcy {
+  padding-top: 0;
+}
+.SttcPgs.PrvcPlcy .Txt {
+  padding: 0 0 10px 0;
+}
+@media only screen and (max-width: 767px) {
+  .SttcPgs.PrvcPlcy .Txt {
+    padding: 0 0 7px 0;
+  }
+}
+.SttcPgs.Terms {
+  padding-top: 0;
+}
+.SttcPgs.Terms .Txt {
+  padding: 10px 0 10px 0;
+}
+@media only screen and (max-width: 767px) {
+  .SttcPgs.Terms .Txt {
+    padding: 7px 0;
+  }
+}
+.SttcPgs.Waiver {
+  padding-top: 0;
+}
+@media only screen and (max-width: 767px) {
+  .SttcPgs {
+    padding: 20px 0;
+  }
+}
+
+.AccrdnDv {
+  padding: 20px 0;
+}
+.AccrdnDv .accordion {
+  font: 600 22px/160% "Nunito Sans";
+  background: transparent url(../Images/Arrow-Thick-U.svg) no-repeat right 20px center;
+  background-size: 14px;
+  -webkit-appearance: none;
+  color: #6A1B9A;
+  cursor: pointer;
+  padding: 10px 0;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  border-bottom: 1px solid #E8EAF6;
+}
+.AccrdnDv .accordion.active {
+  background: transparent url(../Images/Arrow-Thick-D.svg) no-repeat right 20px center;
+  background-size: 14px;
+}
+@media only screen and (max-width: 767px) {
+  .AccrdnDv .accordion.active {
+    background-size: 10px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .AccrdnDv .accordion {
+    font: 600 18px/160% "Nunito Sans";
+    background-size: 10px;
+  }
+}
+.AccrdnDv .panel {
+  padding: 15px 0;
+}
+
+.WinnerMnthLst {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+.WinnerMnthLst li {
+  width: 25%;
+  padding: 10px;
+}
+.WinnerMnthLst li .MtnHldr {
+  background: #fff;
+  border-radius: 10px;
+  border: 1px solid #E8EAF6;
+  overflow: hidden;
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+  transition: 0.3s;
+  z-index: 1;
+}
+.WinnerMnthLst li .MtnHldr .DtHldr {
+  background: #6A1B9A;
+}
+.WinnerMnthLst li .MtnHldr .DtHldr .DtTxt {
+  display: block;
+  color: #fff;
+  padding: 10px;
+  text-align: left;
+  font: 600 20px/160% "Nunito Sans";
+}
+@media only screen and (max-width: 767px) {
+  .WinnerMnthLst li .MtnHldr .DtHldr .DtTxt {
+    font: 600 16px/160% "Nunito Sans";
+  }
+}
+.WinnerMnthLst li .MtnHldr .BrktHldr {
+  padding: 10px;
+  border-bottom: 1px solid #E8EAF6;
+}
+.WinnerMnthLst li .MtnHldr .BrktHldr .WnnrDtl {
+  display: flex;
+  flex-wrap: nowrap;
+  width: 100%;
+  align-items: center;
+}
+.WinnerMnthLst li .MtnHldr .BrktHldr .WnnrDtl .ImgHldr {
+  display: flex;
+  flex-wrap: nowrap;
+  padding-right: 10px;
+}
+.WinnerMnthLst li .MtnHldr .BrktHldr .WnnrDtl .ImgHldr .PflImg {
+  display: block;
+  width: 48px;
+  height: 48px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 100%;
+  border: 1px solid #fff;
+  z-index: 1;
+  position: relative;
+}
+.WinnerMnthLst li .MtnHldr .BrktHldr .WnnrDtl .ImgHldr .PflImg:last-of-type {
+  margin-left: -10px;
+  z-index: 2;
+}
+.WinnerMnthLst li .MtnHldr .BrktHldr .WnnrDtl .TxtHldr {
+  text-align: left;
+}
+.WinnerMnthLst li .MtnHldr .BrktHldr .WnnrDtl .TxtHldr .BrktTxt {
+  display: inline-block;
+  text-align: left;
+  font: 600 14px/80% "Nunito Sans";
+  padding: 6px;
+  margin: 0 0 5px 0;
+  border-radius: 5px;
+  background: #6A1B9A;
+  color: #fff;
+}
+@media only screen and (max-width: 767px) {
+  .WinnerMnthLst li .MtnHldr .BrktHldr .WnnrDtl .TxtHldr .BrktTxt {
+    font: 600 10px/80% "Nunito Sans";
+  }
+}
+.WinnerMnthLst li .MtnHldr .BrktHldr .WnnrDtl .TxtHldr .WnnrNme {
+  display: block;
+  text-align: left;
+  font: 500 20px/100% "Nunito Sans";
+}
+@media only screen and (max-width: 767px) {
+  .WinnerMnthLst li .MtnHldr .BrktHldr .WnnrDtl .TxtHldr .WnnrNme {
+    font: 500 16px/100% "Nunito Sans";
+  }
+}
+.WinnerMnthLst li .MtnHldr .BrktHldr.BrktA .BrktTxt {
+  background: #AD1457 !important;
+}
+.WinnerMnthLst li .MtnHldr .BrktHldr.BrktA .WnnrNme {
+  color: #AD1457 !important;
+}
+.WinnerMnthLst li .MtnHldr .BrktHldr.BrktB .BrktTxt {
+  background: #0097A7 !important;
+}
+.WinnerMnthLst li .MtnHldr .BrktHldr.BrktB .WnnrNme {
+  color: #0097A7 !important;
+}
+.WinnerMnthLst li .MtnHldr .BrktHldr.BrktC .BrktTxt {
+  background: #827717 !important;
+}
+.WinnerMnthLst li .MtnHldr .BrktHldr.BrktC .WnnrNme {
+  color: #827717 !important;
+}
+.WinnerMnthLst li .MtnHldr .BtnHldr {
+  background: #F1F3FF;
+}
+.WinnerMnthLst li .MtnHldr .BtnHldr .Lnk {
+  display: block;
+  margin: 0;
+  padding: 15px 10px;
+  font: 600 16px/100% "Nunito Sans";
+  background: transparent;
+  color: #6A1B9A;
+  cursor: pointer;
+}
+@media only screen and (max-width: 767px) {
+  .WinnerMnthLst li .MtnHldr .BtnHldr .Lnk {
+    font: 600 12px/100% "Nunito Sans";
+  }
+}
+.WinnerMnthLst li .MtnHldr:hover {
+  box-shadow: 0 10px 50px rgba(0, 0, 0, 0.05);
+  transition: 0.3s;
+  z-index: 2;
+}
+@media only screen and (max-width: 767px) {
+  .WinnerMnthLst li {
+    width: 100%;
+    padding: 0 0 40px 0;
+  }
+  .WinnerMnthLst li:last-of-type {
+    padding: 0;
+  }
+}
+
+.WnnrFllLstPopup {
+  display: flex;
+  flex-flow: column;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.WnnrFllLstPopup .TtlDv {
+  border-bottom: 1px solid #E8EAF6;
+  height: 100px;
+}
+.WnnrFllLstPopup .TtlDv .TtlTxt {
+  display: block;
+  padding: 30px;
+  font: 600 32px/100% "Nunito Sans";
+  color: #6A1B9A;
+  text-align: left;
+}
+@media only screen and (max-width: 767px) {
+  .WnnrFllLstPopup .TtlDv .TtlTxt {
+    padding: 20px;
+    font: 600 20px/100% "Nunito Sans";
+  }
+}
+@media only screen and (max-width: 767px) {
+  .WnnrFllLstPopup .TtlDv {
+    height: 60px;
+  }
+}
+.WnnrFllLstPopup .FllBrktLstDv {
+  position: relative;
+  height: 100%;
+  overflow-y: auto;
+  padding: 20px;
+}
+.WnnrFllLstPopup .FllBrktLstDv .BrktHldrDV {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.WnnrFllLstPopup .FllBrktLstDv .BrktHldrDV .BrktHldr {
+  width: calc(33.33% - 20px);
+  margin: 0 10px;
+  border: 1px solid #E8EAF6;
+  border-radius: 10px;
+}
+.WnnrFllLstPopup .FllBrktLstDv .BrktHldrDV .BrktHldr .BrktName {
+  display: block;
+  padding: 20px 15px;
+  background: #6A1B9A;
+  color: #fff;
+  border-radius: 10px 10px 0 0;
+  text-align: left;
+  font: 700 20px/100% "Nunito Sans";
+}
+@media only screen and (max-width: 767px) {
+  .WnnrFllLstPopup .FllBrktLstDv .BrktHldrDV .BrktHldr .BrktName {
+    font: 700 14px/100% "Nunito Sans";
+    padding: 14px 10px;
+  }
+}
+.WnnrFllLstPopup .FllBrktLstDv .BrktHldrDV .BrktHldr .WnnrLst {
+  margin: 0;
+  padding: 0 10px;
+  list-style: none;
+}
+.WnnrFllLstPopup .FllBrktLstDv .BrktHldrDV .BrktHldr .WnnrLst li {
+  width: 100%;
+  display: block;
+  text-align: left;
+  padding: 20px 0;
+  border-bottom: 1px solid #E8EAF6;
+  font: 500 18px/100% "Nunito Sans";
+  color: #37474F;
+}
+.WnnrFllLstPopup .FllBrktLstDv .BrktHldrDV .BrktHldr .WnnrLst li:first-of-type {
+  font: 700 20px/100% "Nunito Sans";
+}
+@media only screen and (max-width: 767px) {
+  .WnnrFllLstPopup .FllBrktLstDv .BrktHldrDV .BrktHldr .WnnrLst li:first-of-type {
+    font: 700 14px/100% "Nunito Sans";
+  }
+}
+.WnnrFllLstPopup .FllBrktLstDv .BrktHldrDV .BrktHldr .WnnrLst li:last-of-type {
+  border-bottom: none;
+}
+@media only screen and (max-width: 767px) {
+  .WnnrFllLstPopup .FllBrktLstDv .BrktHldrDV .BrktHldr .WnnrLst li {
+    padding: 12px 0;
+    font: 500 13px/100% "Nunito Sans";
+  }
+}
+.WnnrFllLstPopup .FllBrktLstDv .BrktHldrDV .BrktHldr.BrktA .BrktName {
+  background: #AD1457;
+}
+.WnnrFllLstPopup .FllBrktLstDv .BrktHldrDV .BrktHldr.BrktA .WnnrLst li:first-of-type {
+  color: #AD1457;
+}
+.WnnrFllLstPopup .FllBrktLstDv .BrktHldrDV .BrktHldr.BrktB .BrktName {
+  background: #0097A7;
+}
+.WnnrFllLstPopup .FllBrktLstDv .BrktHldrDV .BrktHldr.BrktB .WnnrLst li:first-of-type {
+  color: #0097A7;
+}
+.WnnrFllLstPopup .FllBrktLstDv .BrktHldrDV .BrktHldr.BrktC .BrktName {
+  background: #827717;
+}
+.WnnrFllLstPopup .FllBrktLstDv .BrktHldrDV .BrktHldr.BrktC .WnnrLst li:first-of-type {
+  color: #827717;
+}
+@media only screen and (max-width: 1024px) {
+  .WnnrFllLstPopup .FllBrktLstDv .BrktHldrDV .BrktHldr {
+    width: 100%;
+    margin: 0 0 30px 0;
+  }
+  .WnnrFllLstPopup .FllBrktLstDv .BrktHldrDV .BrktHldr:last-of-type {
+    margin: 0;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .WnnrFllLstPopup .FllBrktLstDv .BrktHldrDV .BrktHldr {
+    margin: 0 0 10px 0;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .WnnrFllLstPopup .FllBrktLstDv {
+    padding: 10px;
+  }
+}
+
+/* Outer */
+.popup {
+  width: 100%;
+  height: 100%;
+  display: none;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  background: rgba(0, 0, 0, 0.5);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  z-index: 99;
+}
+
+/* Inner */
+.popup-inner {
+  position: absolute;
+  max-width: 1200px;
+  width: 90%;
+  height: calc(100% - 200px);
+  padding: 0;
+  top: 100px;
+  left: calc(50% - 600px);
+  box-shadow: 0px 25px 100px 0px rgba(0, 0, 0, 0.3);
+  border-radius: 20px;
+  background: #fff;
+  overflow: hidden;
+}
+@media only screen and (max-width: 1200px) {
+  .popup-inner {
+    max-width: 90%;
+    left: 5%;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .popup-inner {
+    top: 25px;
+    height: calc(100% - 50px);
+  }
+}
+
+/* Close Button */
+.popup-close {
+  width: 30px;
+  height: 30px;
+  padding-top: 4px;
+  display: inline-block;
+  position: absolute;
+  top: 45px;
+  right: 45px;
+  transition: ease 0.25s all;
+  transform: translate(50%, -50%);
+  border-radius: 1000px;
+  background: #6A1B9A;
+  font-family: Arial, Sans-Serif;
+  font-size: 20px;
+  text-align: center;
+  line-height: 100%;
+  color: #fff;
+  text-decoration: none;
+}
+@media only screen and (max-width: 767px) {
+  .popup-close {
+    top: 30px;
+    right: 30px;
+  }
+}
+
+.popup-close:hover {
+  transform: translate(50%, -50%) rotate(180deg);
+  background: #6A1B9A;
+  text-decoration: none;
+}/*# sourceMappingURL=StyleSheet.css.map */
